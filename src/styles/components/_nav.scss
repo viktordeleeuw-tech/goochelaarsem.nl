@@ -1,0 +1,10 @@
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(249,249,249,.8);backdrop-filter:blur(12px);border-bottom:1px solid rgba(11,18,37,.06);
+  &__inner{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+  &__logo{font-family:$font-serif;font-weight:800;letter-spacing:.1em}
+  &__links{display:none;gap:32px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;@include respond($bp-md){display:flex}}
+  &__cta{background:$navy;color:$white;@include cta-base; font-size:14px;
+    &--gold{background:$gold;color:$navy;box-shadow:$shadow-cta;
+      &:hover{transform:translateY(-2px) scale(1.02)}}
+  }
+}
