@@ -1,0 +1,12 @@
+
+.testimonials{position:relative;
+  &__grid{display:grid;gap:32px;@include respond($bp-lg){grid-template-columns:repeat(3,1fr)}}
+  &__card{@include card;padding:32px;position:relative;transform:rotate(-.5deg);
+    &:nth-child(2){transform:rotate(.8deg)} &:nth-child(3){transform:rotate(-.8deg)}
+    .quote-mark{font-family:$font-serif;font-size:80px;line-height:.5;color:$gold;position:absolute;top:20px;left:20px;opacity:.4}
+    p{position:relative;z-index:1;font-style:italic;margin:20px 0}
+    .author{display:flex;align-items:center;gap:12px;font-size:14px;
+      img{width:40px;height:40px;border-radius:50%}
+    }
+  }
+}

@@ -1,0 +1,15 @@
+
+.portfolio{
+  &__grid{display:grid;gap:24px;@include respond($bp-md){grid-template-columns:repeat(3,1fr)}}
+  &__card{@include card;position:relative;min-height:520px;display:flex;flex-direction:column;
+    &:hover .portfolio__img{transform:scale(1.05)}
+    &__img{height:320px;width:100%;transition:transform .6s ease;object-fit:cover}
+    &__content{padding:24px;flex:1;display:flex;flex-direction:column}
+    &__num{font-family:$font-serif;font-size:12px;letter-spacing:.2em;opacity:.4}
+    &__title{font-size:28px;margin:8px 0}
+    &__cta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;
+      .link{text-decoration:underline;text-underline-offset:4px}
+      .quote{font-size:11px;background:$bg-muted;padding:6px 10px;border-radius:$radius-full}
+    }
+  }
+}

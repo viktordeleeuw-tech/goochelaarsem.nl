@@ -1,0 +1,10 @@
+
+@mixin flex-center { display:flex; align-items:center; justify-content:center; }
+@mixin cta-base {
+  display:inline-flex; align-items:center; justify-content:center;
+  min-height:44px; padding:14px 28px; border-radius:$radius-full;
+  font-weight:600; font-family:$font-sans; transition:all .2s ease;
+  cursor:pointer; border:none; text-decoration:none;
+}
+@mixin card { background:$white; border-radius:$radius-xl; box-shadow:$shadow-soft; overflow:hidden; }
+@mixin respond($bp){ @media(min-width:$bp){ @content; } }
