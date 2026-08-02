@@ -1,0 +1,50 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import '../styles/components/_pages.scss';
+---
+
+<PageLayout title="Table Magic">
+  <section class="container show-hero section">
+    <div>
+      <h1 class="hero__title">Table Magic</h1>
+      <p class="hero__sub">Magie vlak voor de ogen van je gasten. Geen afstandelijke show, maar pure interactie en verwondering op centimeters afstand.</p>
+      <a href="#boeken" class="cta-primary">Boek Table Magic</a>
+    </div>
+    <div class="hero__collage">
+      <img class="main" src="/images/table-magic.jpg" alt="Table Magic" />
+    </div>
+  </section>
+
+  <section class="container show-section section">
+    <h2 class="show-section__title">Waarom Table Magic?</h2>
+    <div class="show-section__grid">
+      <div class="show-section__item">
+        <h3>Intiem & Persoonlijk</h3>
+        <p>Directe interactie met je gasten creëert onvergetelijke momenten.</p>
+      </div>
+      <div class="show-section__item">
+        <h3>Flexibel</h3>
+        <p>Perfect voor bruiloften, bedrijfsfeesten en privébijeenkomsten.</p>
+      </div>
+      <div class="show-section__item">
+        <h3>Professionaliteit</h3>
+        <p>Jaren van ervaring en vakmanschap in elke truc.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="boeken" class="contact">
+    <div class="container contact__inner">
+      <div>
+        <h2 class="contact__title">Table Magic voor je evenement</h2>
+        <p class="contact__subtitle">Geïnteresseerd? Laat weten wat je organiseert en ontdek de mogelijkheden.</p>
+      </div>
+      <form class="contact__form">
+        <input type="text" placeholder="Je naam" required class="contact__form-input" />
+        <input type="email" placeholder="Je e-mailadres" required class="contact__form-input" />
+        <input type="text" placeholder="Datum en aantal gasten" class="contact__form-input" />
+        <button type="submit" class="cta-primary contact__form-submit">Vraag een offerte aan</button>
+      </form>
+    </div>
+  </section>
+</PageLayout>

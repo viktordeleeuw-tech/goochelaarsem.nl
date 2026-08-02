@@ -1,0 +1,30 @@
+---
+import Base from './Base.astro';
+import Navigation from '../components/Navigation.astro';
+import '../styles/components/_page-layout.scss';
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Base>
+  <Navigation />
+  <main>
+    <slot />
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p><strong>Sem Houtenbos</strong></p>
+        <p class="footer__subtitle">Entertainment & Goochelkunst</p>
+      </div>
+      <div class="footer__right">
+        <p class="footer__text">© 2024 Sem Houtenbos</p>
+        <p class="footer__text">v.deleeuw@upcmail.nl</p>
+      </div>
+    </div>
+  </footer>
+</Base>

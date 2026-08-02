@@ -1,0 +1,79 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import '../styles/components/_pages.scss';
+---
+
+<PageLayout title="Contact">
+  <section class="container contact-hero">
+    <div class="contact-hero__inner">
+      <h1 class="contact-hero__title">Laten we in contact gaan</h1>
+      <p class="contact-hero__subtitle">Vertel wat je organiseert en ontdek welke act het beste past bij jouw evenement.</p>
+
+      <form class="contact__form">
+        <div class="contact__form-group">
+          <label class="contact__form-label">Wat organiseer je?</label>
+          <select class="contact__form-select">
+            <option>Selecteer een optie</option>
+            <option>Bruiloft</option>
+            <option>Bedrijfsfeest</option>
+            <option>Kinderfeest</option>
+            <option>Circus / Festival</option>
+            <option>Ander evenement</option>
+          </select>
+        </div>
+
+        <div class="contact__form-group">
+          <label class="contact__form-label">Je naam</label>
+          <input type="text" placeholder="Volledige naam" required class="contact__form-input" />
+        </div>
+
+        <div class="contact__form-group">
+          <label class="contact__form-label">E-mailadres</label>
+          <input type="email" placeholder="jij@voorbeeld.nl" required class="contact__form-input" />
+        </div>
+
+        <div class="contact__form-group">
+          <label class="contact__form-label">Datum en aantal gasten</label>
+          <input type="text" placeholder="bijv. 15 juni 2025 • 50 gasten" required class="contact__form-input" />
+        </div>
+
+        <div class="contact__form-group">
+          <label class="contact__form-label">Bericht (optioneel)</label>
+          <textarea placeholder="Vertel meer over je evenement..." class="contact__form-textarea"></textarea>
+        </div>
+
+        <button type="submit" class="cta-primary contact__form-submit">Check beschikbaarheid</button>
+        <div class="contact__form-note">⚡ Reactie binnen 2 uur • ✓ Geen verplichtingen</div>
+      </form>
+    </div>
+  </section>
+
+  <section class="container contact-methods section">
+    <h2 class="contact-methods__title">Andere manieren om contact op te nemen</h2>
+
+    <div class="contact-methods__grid">
+      <div class="contact-methods__item">
+        <p class="contact-methods__icon">📧</p>
+        <h3 class="contact-methods__heading">E-mail</h3>
+        <a href="mailto:v.deleeuw@upcmail.nl" class="contact-methods__link">v.deleeuw@upcmail.nl</a>
+      </div>
+
+      <div class="contact-methods__item">
+        <p class="contact-methods__icon">📱</p>
+        <h3 class="contact-methods__heading">WhatsApp</h3>
+        <p class="contact-methods__text">Snel en persoonlijk contact</p>
+      </div>
+
+      <div class="contact-methods__item">
+        <p class="contact-methods__icon">⭐</p>
+        <h3 class="contact-methods__heading">Google Reviews</h3>
+        <p class="contact-methods__text">4.9 / 5 uit 200+ shows</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container contact-cta section">
+    <h2 class="contact-cta__title">Klaar voor magie?</h2>
+    <p class="contact-cta__text">Of je nu een intieme diner nodig hebt met Table Magic of een volledige podium show—Sem zorgt voor entertainment dat je gasten nooit zullen vergeten.</p>
+  </section>
+</PageLayout>

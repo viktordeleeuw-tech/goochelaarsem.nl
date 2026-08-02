@@ -1,0 +1,50 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import '../styles/components/_pages.scss';
+---
+
+<PageLayout title="Kindershows">
+  <section class="container show-hero section">
+    <div>
+      <h1 class="hero__title">Kindershows</h1>
+      <p class="hero__sub">Kinderen wanen zich in een fantasie vol magie, humor en verwondering. Van bloemen tot ballondieren—live gemaakt waar ze bij staan.</p>
+      <a href="#boeken" class="cta-primary">Boek een Kindershow</a>
+    </div>
+    <div class="hero__collage">
+      <img class="main" src="/images/sem-3.jpeg" alt="Kindershows" />
+    </div>
+  </section>
+
+  <section class="container show-section section">
+    <h2 class="show-section__title">Perfect voor elk kinderevenement</h2>
+    <div class="show-section__grid">
+      <div class="show-section__item">
+        <h3>Kinderfeestjes</h3>
+        <p>Magie, interactie en veel plezier voor alle leeftijden.</p>
+      </div>
+      <div class="show-section__item">
+        <h3>Scholen & Bibliotheken</h3>
+        <p>Educatief entertainment dat kinderen inspireert.</p>
+      </div>
+      <div class="show-section__item">
+        <h3>Familiegebeurtenissen</h3>
+        <p>Iedereen staat versteld van de creaties en trucs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="boeken" class="contact">
+    <div class="container contact__inner">
+      <div>
+        <h2 class="contact__title">Plan een Kindershow in</h2>
+        <p class="contact__subtitle">Maak van je evenement een onvergetelijke dag vol magie en plezier.</p>
+      </div>
+      <form class="contact__form">
+        <input type="text" placeholder="Je naam" required class="contact__form-input" />
+        <input type="email" placeholder="Je e-mailadres" required class="contact__form-input" />
+        <input type="text" placeholder="Aantal kinderen en leeftijden" class="contact__form-input" />
+        <button type="submit" class="cta-primary contact__form-submit">Vraag informatie aan</button>
+      </form>
+    </div>
+  </section>
+</PageLayout>

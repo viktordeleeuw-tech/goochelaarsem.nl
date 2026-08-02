@@ -1,0 +1,342 @@
+// Contact page
+.contact-hero {
+  padding-top: 80px;
+}
+
+.contact-hero__inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-hero__title {
+  font-size: 48px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.contact-hero__subtitle {
+  text-align: center;
+  opacity: 0.7;
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+
+.contact__form {
+  max-width: 100%;
+  background: transparent;
+  padding: 0;
+}
+
+.contact__form-group {
+  margin-bottom: 24px;
+}
+
+.contact__form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.contact__form-input,
+.contact__form-select,
+.contact__form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-gold, #FFC94A);
+  border-radius: 8px;
+  background: var(--color-bg-primary);
+  color: inherit;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.contact__form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact__form-submit {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+}
+
+.contact__form-note {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.contact-methods {
+  border-top: 1px solid var(--color-border, rgba(255, 201, 74, 0.1));
+  padding-top: 60px;
+}
+
+.contact-methods__title {
+  font-size: 36px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.contact-methods__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-methods__item {
+  text-align: center;
+}
+
+.contact-methods__icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.contact-methods__heading {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.contact-methods__text {
+  opacity: 0.7;
+}
+
+.contact-methods__link {
+  color: var(--color-gold, #FFC94A);
+  text-decoration: none;
+}
+
+.contact-cta {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.contact-cta__title {
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+.contact-cta__text {
+  opacity: 0.7;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+// Reviews page
+.reviews-hero {
+  padding-top: 80px;
+}
+
+.reviews-hero__title {
+  font-size: 48px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.reviews-hero__subtitle {
+  text-align: center;
+  opacity: 0.7;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.contact {
+  background: #0b1225;
+  color: #fff;
+  border-radius: 40px 40px 0 0;
+  margin-top: 40px;
+}
+
+.contact__inner {
+  display: grid;
+  gap: 40px;
+  padding: 80px 0;
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.contact__title {
+  font-size: clamp(36px, 5vw, 56px);
+}
+
+.contact__subtitle {
+  opacity: 0.7;
+  margin-top: 16px;
+}
+
+.contact__images {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact__image {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.contact__form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  border-radius: 24px;
+  backdrop-filter: blur(8px);
+
+  .contact__form-select,
+  .contact__form-input {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-bottom: 12px;
+    font-family: inherit;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+.contact__form-note--small {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+// Show pages (table-magic, kindershows, ballon-magic, circus-shows)
+.show-hero {
+  padding-top: 60px;
+}
+
+.show-section {
+  padding: 80px 0;
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+.show-section__title {
+  font-size: 36px;
+  margin-bottom: 32px;
+}
+
+.show-section__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.show-section__item {
+  padding: 24px;
+  background: rgba(255, 201, 74, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 201, 74, 0.1);
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 14px;
+    opacity: 0.8;
+    line-height: 1.6;
+  }
+}
+
+// Homepage index styles
+.sparkle {
+  position: absolute;
+  z-index: 10;
+
+  &:first-of-type {
+    top: -10px;
+    right: 10%;
+  }
+
+  &:last-of-type {
+    bottom: 10%;
+    left: -10%;
+  }
+}
+
+.portfolio__card p {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.editorial h2 {
+  font-size: 48px;
+  font-family: Playfair Display, serif;
+}
+
+.editorial__text {
+  margin-top: 20px;
+}
+
+.editorial__contact-cta {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .nmu-badge {
+    font-size: 12px;
+    background: white;
+    padding: 6px 10px;
+    border-radius: 999px;
+  }
+}
+
+.testimonials h2 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 48px;
+  font-family: Playfair Display, serif;
+}
+
+.testimonials__cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.impressie h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: Playfair Display, serif;
+}
+
+.portfolio h2 {
+  font-size: 48px;
+  margin-bottom: 32px;
+  font-family: Playfair Display, serif;
+}
+
+.contact__images {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+  }
+}

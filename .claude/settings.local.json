@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_claude-mem_mcp-search__smart_outline",
+      "Bash(python3)",
+      "Bash(ls -la /Users/viktor/LionCraft/Os/project-templates/ 2>/dev/null | head -20)",
+      "Bash(find /Users/viktor -name \"*Sem-Houtenbos-Entertainment-Foto-Versie.html\" 2>/dev/null)",
+      "Bash(ssh-keygen -t ed25519 -C \"viktordeleeuw@gmail.com\" -f ~/.ssh/id_ed25519 -N \"\")",
+      "Read(//Users/viktor/.claude/**)",
+      "Read(//Library/Application Support/ClaudeCode/**)",
+      "Bash(env)",
+      "Read(//Users/viktor/**)",
+      "Bash(xargs -0 stat -f \"%m %N\")",
+      "Bash(awk '{print $1, $2}')",
+      "Bash(bash /private/tmp/claude-501/-Users-viktor-LionCraft-Klanten-Sem-Houtenbos-goochelaarsem-nl/d2e92407-6df9-43f8-b48f-7d0d110f9d5d/scratchpad/scan.sh)",
+      "Bash(awk '-F\\\\t' '$4+0 > 2000 {print $2}' /private/tmp/claude-501/-Users-viktor-LionCraft-Klanten-Sem-Houtenbos-goochelaarsem-nl/d2e92407-6df9-43f8-b48f-7d0d110f9d5d/scratchpad/hooks.txt)",
+      "Bash(awk '{a[NR]=$1} END {print \"n=\"NR, \"p50=\"a[int\\(NR*0.5\\)], \"p90=\"a[int\\(NR*0.9\\)], \"max=\"a[NR]}')",
+      "Bash(git -C /Users/viktor rev-parse --is-inside-work-tree)",
+      "Bash(git -C /Users/viktor status --porcelain -- CLAUDE.md)",
+      "Bash(npm view *)",
+      "Bash(jq -r '.env.DISABLE_AUTOUPDATER, .env.DISABLE_UPDATES' ~/.claude/settings.json)",
+      "Bash(cp ~/.claude/settings.json /private/tmp/claude-501/-Users-viktor-LionCraft-Klanten-Sem-Houtenbos-goochelaarsem-nl/d2e92407-6df9-43f8-b48f-7d0d110f9d5d/scratchpad/settings.json.bak)",
+      "Bash(cp /private/tmp/claude-501/-Users-viktor-LionCraft-Klanten-Sem-Houtenbos-goochelaarsem-nl/d2e92407-6df9-43f8-b48f-7d0d110f9d5d/scratchpad/settings.new.json ~/.claude/settings.json)",
+      "Bash(rm -rf ~/.claude/commands/swarm ~/.claude/commands/analysis ~/.claude/commands/coordination ~/.claude/commands/memory ~/.claude/commands/optimization ~/.claude/commands/workflows ~/.claude/commands/agents ~/.claude/commands/github ~/.claude/commands/hooks ~/.claude/commands/hive-mind ~/.claude/commands/automation ~/.claude/commands/monitoring ~/.claude/commands/sparc)",
+      "Bash(rm -f ~/.local/bin/claude)",
+      "Bash(rm -rf ~/.local/share/claude/versions/2.1.101)",
+      "Bash(claude update *)",
+      "Bash(rm -f ~/.claude/commands/claude-flow-help.md ~/.claude/commands/claude-flow-memory.md ~/.claude/commands/claude-flow-swarm.md *)"
+    ]
+  }
+}

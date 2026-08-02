@@ -1,0 +1,14 @@
+{
+  "id": "session-1785599474458",
+  "startedAt": "2026-08-01T15:51:14.458Z",
+  "cwd": "/Users/viktor/LionCraft/Klanten/Sem Houtenbos/goochelaarsem.nl",
+  "context": {},
+  "metrics": {
+    "edits": 6,
+    "commands": 0,
+    "tasks": 0,
+    "errors": 0
+  },
+  "endedAt": "2026-08-01T16:14:39.837Z",
+  "duration": 1405380
+}

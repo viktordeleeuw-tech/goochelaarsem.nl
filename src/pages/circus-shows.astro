@@ -1,0 +1,50 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import '../styles/components/_pages.scss';
+---
+
+<PageLayout title="Circus Shows">
+  <section class="container show-hero section">
+    <div>
+      <h1 class="hero__title">Circus Shows</h1>
+      <p class="hero__sub">Complete show voor het podium met humor, magie en spectaculaire acts. Perfect voor feesten, bruiloften en circusgebeurtenissen.</p>
+      <a href="#boeken" class="cta-primary">Boek een Circus Show</a>
+    </div>
+    <div class="hero__collage">
+      <img class="main" src="/images/sem-2.jpeg" alt="Circus podium" />
+    </div>
+  </section>
+
+  <section class="container show-section section">
+    <h2 class="show-section__title">Podium magie op maat</h2>
+    <div class="show-section__grid">
+      <div class="show-section__item">
+        <h3>Volledige Show</h3>
+        <p>30-60 minuten pure entertainment met professionele opvoering.</p>
+      </div>
+      <div class="show-section__item">
+        <h3>Humor & Interactie</h3>
+        <p>Het publiek lacht, juicht en staat versteld.</p>
+      </div>
+      <div class="show-section__item">
+        <h3>Professionals Setting</h3>
+        <p>Geschikt voor grote evenementen en theaters.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="boeken" class="contact">
+    <div class="container contact__inner">
+      <div>
+        <h2 class="contact__title">Circus Show boeken</h2>
+        <p class="contact__subtitle">Zorg voor een show die nog lang wordt herinnerd.</p>
+      </div>
+      <form class="contact__form">
+        <input type="text" placeholder="Je naam" required class="contact__form-input" />
+        <input type="email" placeholder="Je e-mailadres" required class="contact__form-input" />
+        <input type="text" placeholder="Type evenement en aantal gasten" class="contact__form-input" />
+        <button type="submit" class="cta-primary contact__form-submit">Vraag informatie aan</button>
+      </form>
+    </div>
+  </section>
+</PageLayout>
