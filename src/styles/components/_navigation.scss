@@ -1,3 +1,5 @@
+@import '../base/variables';
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -13,9 +15,11 @@
 .nav {
   padding: 16px 0;
   border-bottom: 1px solid rgba(255, 201, 74, 0.1);
-  background: var(--color-bg-primary);
-  position: relative;
+  background: $bg-light;
+  position: sticky;
+  top: 0;
   z-index: 100;
+  box-shadow: 0 2px 8px rgba(11, 18, 37, 0.08);
 }
 
 .nav-inner {
@@ -26,8 +30,9 @@
 }
 
 .nav-brand {
+  font-family: $font-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 2px;
   text-decoration: none;
   color: inherit;
@@ -110,20 +115,20 @@ body:has(.nav-toggle-checkbox:checked) {
   overflow-y: auto;
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-12px);
+  transform: translateX(-100%);
   pointer-events: none;
-  transition: opacity 320ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform 320ms cubic-bezier(0.16, 1, 0.3, 1),
-    visibility 0s linear 320ms;
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 400ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s linear 400ms;
 }
 
 .nav-toggle-checkbox:checked ~ .nav-inner .nav-menu {
   visibility: visible;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
   pointer-events: auto;
-  transition: opacity 320ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform 320ms cubic-bezier(0.16, 1, 0.3, 1),
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 400ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 0s linear 0s;
 }
 
@@ -141,11 +146,11 @@ body:has(.nav-toggle-checkbox:checked) {
   font-size: 16px;
   letter-spacing: 2px;
   text-decoration: none;
-  color: var(--color-gold, #FFC94A);
+  color: $gold;
   flex: 1;
 
   &:focus-visible {
-    outline: 2px solid var(--color-gold, #FFC94A);
+    outline: 2px solid $gold;
     outline-offset: 4px;
     border-radius: 4px;
   }
@@ -175,7 +180,7 @@ body:has(.nav-toggle-checkbox:checked) {
   }
 
   &:focus-visible {
-    outline: 2px solid var(--color-gold, #FFC94A);
+    outline: 2px solid $gold;
     outline-offset: 4px;
     border-radius: 4px;
   }
@@ -204,6 +209,7 @@ body:has(.nav-toggle-checkbox:checked) {
 .nav-toggle-checkbox:checked ~ .nav-inner .nav-list > li:nth-child(1) { animation-delay: 90ms; }
 .nav-toggle-checkbox:checked ~ .nav-inner .nav-list > li:nth-child(2) { animation-delay: 150ms; }
 .nav-toggle-checkbox:checked ~ .nav-inner .nav-list > li:nth-child(3) { animation-delay: 210ms; }
+.nav-toggle-checkbox:checked ~ .nav-inner .nav-list > li:nth-child(4) { animation-delay: 270ms; }
 
 @keyframes nav-item-in {
   to {
@@ -213,11 +219,12 @@ body:has(.nav-toggle-checkbox:checked) {
 }
 
 .nav-link {
+  font-family: $font-serif;
   text-decoration: none;
   color: #ffffff;
   font-size: 19px;
   font-weight: 600;
-  padding: 18px 4px;
+  padding: 20px 4px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -226,11 +233,11 @@ body:has(.nav-toggle-checkbox:checked) {
 
   &:hover,
   &:focus-visible {
-    color: var(--color-gold, #FFC94A);
+    color: $gold;
   }
 
   &:focus-visible {
-    outline: 2px solid var(--color-gold, #FFC94A);
+    outline: 2px solid $gold;
     outline-offset: -2px;
     border-radius: 4px;
   }
@@ -264,6 +271,7 @@ body:has(.nav-toggle-checkbox:checked) {
 }
 
 .nav-sublink {
+  font-family: $font-serif;
   display: block;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.72);
@@ -274,11 +282,11 @@ body:has(.nav-toggle-checkbox:checked) {
 
   &:hover,
   &:focus-visible {
-    color: var(--color-gold, #FFC94A);
+    color: $gold;
   }
 
   &:focus-visible {
-    outline: 2px solid var(--color-gold, #FFC94A);
+    outline: 2px solid $gold;
     outline-offset: 2px;
     border-radius: 4px;
   }
@@ -290,8 +298,8 @@ body:has(.nav-toggle-checkbox:checked) {
   font-weight: 600;
   border-radius: 999px;
   text-decoration: none;
-  background: var(--color-gold, #FFC94A);
-  color: var(--color-bg-primary);
+  background: $gold;
+  color: $navy;
   transition: transform 200ms ease, box-shadow 200ms ease;
   white-space: nowrap;
   text-align: center;
@@ -299,8 +307,12 @@ body:has(.nav-toggle-checkbox:checked) {
   display: block;
   box-shadow: 0 8px 24px rgba(255, 201, 74, 0.22);
 
+  &:hover {
+    box-shadow: 0 0 20px rgba(255, 201, 74, 0.4), 0 8px 24px rgba(255, 201, 74, 0.22);
+  }
+
   &:active {
-    transform: translateY(1px);
+    transform: scale(0.98);
   }
 
   &--desktop {
@@ -400,7 +412,7 @@ body:has(.nav-toggle-checkbox:checked) {
     border: 1px solid rgba(255, 201, 74, 0.12);
     border-left: 1px solid rgba(255, 201, 74, 0.12);
     border-radius: 14px;
-    background: var(--color-bg-primary);
+    background: $bg-light;
     box-shadow: 0 16px 40px rgba(11, 18, 37, 0.18);
     min-width: 190px;
     z-index: 10;
@@ -424,7 +436,7 @@ body:has(.nav-toggle-checkbox:checked) {
     &:hover,
     &:focus-visible {
       background: rgba(255, 201, 74, 0.1);
-      color: var(--color-gold, #FFC94A);
+      color: $gold;
     }
   }
 

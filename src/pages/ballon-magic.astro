@@ -5,46 +5,32 @@ import '../styles/components/_pages.scss';
 
 <PageLayout title="Ballon Magic">
   <section class="container show-hero section">
-    <div>
+    <div data-reveal-onload="left">
       <h1 class="hero__title">Ballon Magic</h1>
       <p class="hero__sub">Wat nou als je van een stukje opblaasrubber een Donald Duck maakt? Balloncreaties die verder gaan dan je ooit voor mogelijk hield.</p>
       <a href="#boeken" class="cta-primary">Boek Ballon Magic</a>
     </div>
-    <div class="hero__collage">
+    <div class="hero__collage" data-reveal-onload="right">
       <img class="main" src="/images/sem-3.jpeg" alt="Ballonkunst" />
     </div>
   </section>
 
-  <section class="container show-section section">
-    <h2 class="show-section__title">Creaties die verbaasd doen staan</h2>
-    <div class="show-section__grid">
-      <div class="show-section__item">
-        <h3>Custom Creaties</h3>
-        <p>Van dieren tot fantasiefiguren—allemaal ter plekke gemaakt.</p>
-      </div>
-      <div class="show-section__item">
-        <h3>Gast-Interactie</h3>
-        <p>Kinderen en volwassenen kunnen zelf iets kiezen.</p>
-      </div>
-      <div class="show-section__item">
-        <h3>Visuaal Spektakel</h3>
-        <p>Perfect voor bruiloften, feesten en festivals.</p>
-      </div>
-    </div>
-  </section>
+  <section class="container section show-story">
+    <img class="show-story__image" src="/images/Logo-BalloonMagic.webp" alt="Ballonkunst" data-reveal="bottom" />
+    <p class="editorial__text" data-reveal="up">Sem Houtenbos komt met zijn Ballon Magic-act naar jouw evenement.</p>
+    <p data-reveal="up">Ballon Magic bestaat uit een mini-magic-show vol magie, humor en zelfs een paar mooie ballonsculpturen. Sem verzamelt het publiek tijdens deze act om zich heen.</p>
+    <p data-reveal="up">Tijdens de act mogen kinderen helpen met goocheltrucs en natuurlijk worden ze dan de ster van de act. Dat zorgt voor veel gelach, verbaasde gezichten en natuurlijk veel plezier voor kinderen én ouders.</p>
+    <p data-reveal="up">Als beloning voor de goochelaarsassistent maakt Sem een bijzonder ballonsculptuur. Geen simpel ballonhondje of zwaard dat je overal ziet, maar mooie balloncreaties die met veel aandacht worden gemaakt. Zo krijgen sommige kinderen iets extra speciaals mee naar huis.</p>
 
-  <section id="boeken" class="contact">
-    <div class="container contact__inner">
-      <div>
-        <h2 class="contact__title">Ballonkunst op je evenement</h2>
-        <p class="contact__subtitle">Een unieke activiteit die al je gasten zal vermaken.</p>
-      </div>
-      <form class="contact__form">
-        <input type="text" placeholder="Je naam" required class="contact__form-input" />
-        <input type="email" placeholder="Je e-mailadres" required class="contact__form-input" />
-        <input type="text" placeholder="Type evenement en aantal gasten" class="contact__form-input" />
-        <button type="submit" class="cta-primary contact__form-submit">Vraag een offerte aan</button>
-      </form>
-    </div>
+    <h3 data-reveal="up">Opmerking</h3>
+    <p data-reveal="up">Dit betreft geen vaste show, maar entertainment waarbij bezoekers kunnen komen en gaan. Wil je wel een vaste show? Kijk dan op de pagina <a href="/kindershows" class="link">Kindershow</a>.</p>
+    <p data-reveal="up">Geschikt voor: winkelcentra, festivals, kermissen en opendagen.</p>
+
+    <h3 data-reveal="up">Waarom Ballon Magic?</h3>
+    <ul data-reveal="up">
+      <li>Geen massaproductie maar prachtige ballonfiguren</li>
+      <li>Interactief</li>
+      <li>De ballonnen zijn 100% biologisch afbreekbaar</li>
+    </ul>
   </section>
 </PageLayout>

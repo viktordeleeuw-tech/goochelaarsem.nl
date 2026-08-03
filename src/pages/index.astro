@@ -5,57 +5,62 @@ import '../styles/components/_pages.scss';
 <PageLayout>
 
 <section class="container hero section">
-  <div>
+  <div data-reveal-onload="left">
     <div class="hero__eyebrow">Goochelaar • Entertainer • Ballonkunstenaar</div>
     <h1 class="hero__title"><span>Magie, humor en Verwondering voor ieder evenement!.</h1>
-    <p class="hero__sub">Op zoek naar een  goochelaar of entertainer voor jouw evenement? Sem Houtenbos zorgt voor entertainment dat mensen samenbrengt, verrast en verwondert.</p>
+    <p class="hero__sub">Op zoek naar een <strong>goochelaar of entertainer voor jouw evenement</strong>? Sem Houtenbos zorgt voor entertainment dat mensen samenbrengt, verrast en verwondert.<br><br>
+    Van interactieve <strong>Table-Magic</strong> en <strong>BalloonMagic</strong> tussen de gasten tot een complete <strong>Centrale Act</strong>, <strong>Podium Act</strong> of interactieve <strong>Kindershow</strong>: Sem past zijn optreden aan op het publiek, de locatie en het soort evenement.</p>
     <a href="#boeken" class="cta-primary">Boek een magische belevenis</a>
   </div>
   <div class="hero__collage">
-    <img class="main" src="/images/hero-goochelaaarsem.jpg" alt="Sem studioportret" />
-    <img class="polaroid" src="/images/sem-3.jpeg" alt="Ballon bloem" />
-    <img class="polaroid polaroid--2" src="/images/hero-goochelaarsem-2.jpg" alt="Podium act" />
+    <img class="main" src="/images/hero-goochelaaarsem.webp" alt="Sem studioportret" data-reveal-onload="right" />
+    <img class="polaroid" src="/images/hero-goochelaarsem-overlay-2.webp" alt="Ballon bloem" data-reveal-onload="right" style="--reveal-delay: 450ms" />
+    <img class="polaroid polaroid--2" src="/images/hero-goochelaarsem-overlay-1.webp" alt="Podium act" data-reveal-onload="right" style="--reveal-delay: 900ms" />
     <div class="sparkle">✨</div>
     <div class="sparkle">★</div>
   </div>
 </section>
+<section id="extra-info" class="container section editorial">
+  <div class="container">
+     <h2>Met magie, humor, interactie en verrassende momenten zorgt Sem ervoor dat jouw gasten niet alleen toeschouwer zijn, maar onderdeel worden van de act.</h2>
+</section>
 <section id="shows" class="container section portfolio">
-  <h2>Een passende vorm van magie<br/>voor ieder evenement</h2>
+  <h2 data-reveal="up">Een passende vorm van magie<br/>voor ieder evenement</h2>
   <div class="portfolio__grid">
-    <div class="portfolio__card">
-      <img class="portfolio__card__img" src="/images/table-magic.jpg" alt="Table Magic" />
+    <div class="portfolio__card" data-reveal="up">
+      <img class="portfolio__card__img" src="/images/home-table-magic.webp" alt="Table Magic" />
       <div class="portfolio__card__content">
         <span class="portfolio__card__num">TABLE MAGIC</span>
         <h3 class="portfolio__card__title">Dichtbij. Interactief. Onvergetelijk.</h3>
         <p>Geen afstandelijke show, maar magie vlak voor de ogen van je gasten.</p>
-        <div class="portfolio__card__cta"><span class="link">Meer info →</span><span class="quote">Alex S.: absolute aanrader</span></div>
+        <div class="portfolio__card__cta"><a href="/table-magic" class="link">Meer info →</a><span class="quote">Alex S.: absolute aanrader</span></div>
       </div>
     </div>
-    <div class="portfolio__card">
-      <img class="portfolio__card__img" src="/images/sem-3.jpeg" alt="Kindershows" />
+    <div class="portfolio__card" data-reveal="up">
+      <img class="portfolio__card__img" src="/images/home-kindershow-1.webp" alt="Kindershows" />
       <div class="portfolio__card__content">
         <span class="portfolio__card__num">Kindershows</span>
         <h3 class="portfolio__card__title">Kinderen wanen zich in een fantasie</h3>
         <p>Van bloemen tot honden, live gemaakt waar kinderen bij staan.</p>
-        <div class="portfolio__card__cta"><span class="link">Meer info →</span><span class="quote">Esmee F.: fantastische connectie</span></div>
+        <div class="portfolio__card__cta"><a href="/kindershows" class="link">Meer info →</a><span class="quote">Esmee F.: fantastische connectie</span></div>
       </div>
     </div>
-    <div class="portfolio__card">
-      <img class="portfolio__card__img" src="/images/sem-3.jpeg" alt="Kindershows" />
+    <div class="portfolio__card" data-reveal="up">
+      <img class="portfolio__card__img" src="/images/home-balloon-magic.webp" alt="Kindershows" />
       <div class="portfolio__card__content">
         <span class="portfolio__card__num">BALLONKUNST</span>
         <h3 class="portfolio__card__title">Balloncreaties die verder gaan dan een hondje</h3>
         <p>Wat nou als je van een stukje opblaasrubber een donad duck maakt</p>
-        <div class="portfolio__card__cta"><span class="link">Meer info →</span><span class="quote">Jordy C.: Absolute aanrader</span></div>
+        <div class="portfolio__card__cta"><a href="/ballon-magic" class="link">Meer info →</a><span class="quote">Jordy C.: Absolute aanrader</span></div>
       </div>
     </div>
-    <div class="portfolio__card">
-      <img class="portfolio__card__img" src="/images/sem-2.jpeg" alt="Circus podium" />
+    <div class="portfolio__card" data-reveal="up">
+      <img class="portfolio__card__img" src="/images/home-kindershow.webp" alt="Circus podium" />
       <div class="portfolio__card__content">
         <span class="portfolio__card__num">CIRCUS SHOW</span>
         <h3 class="portfolio__card__title">Podium Act met Humor</h3>
         <p>Complete show voor feesten, bruiloften en circus-events.</p>
-        <div class="portfolio__card__cta"><span class="link">Bekijk act →</span><span class="quote">VV Opperdoes: verbaasde blikken</span></div>
+        <div class="portfolio__card__cta"><a href="/circus-shows" class="link">Bekijk act →</a><span class="quote">VV Opperdoes: verbaasde blikken</span></div>
       </div>
     </div>
   </div>
@@ -63,57 +68,47 @@ import '../styles/components/_pages.scss';
 
 <section id="over" class="editorial section">
   <div class="container editorial__grid">
-    <div>
+    <div data-reveal="up">
       <h2>Al sinds zijn vierde betoverd door magie</h2>
       <p class="editorial__text">Magie begon voor Sem al op vierjarige leeftijd. Sindsdien voelt hij zich thuis in circussen, shows en goochelwinkels. Geïnspireerd door nationale en internationale goochelaars ontwikkelde hij door jarenlang oefenen en met veel eigen creativiteit een persoonlijke stijl vol humor, interactie en verwondering.</p>
-      <div class="editorial__contact-cta"><a href="#boeken" class="nav__cta nav__cta--gold">Maak kennis met Sem</a><span class="nmu-badge">Lid van NMU</span></div>
+      <div class="editorial__contact-cta"><a href="#boeken" class="cta-primary">Maak kennis met Sem</a><span class="nmu-badge">Lid van NMU</span></div>
     </div>
-    <div class="editorial__photos">
-      <img src="/images/sem-9.jpeg" alt="Studio" />
-      <img src="/images/sem-1.jpeg" alt="Oranje ballon" />
-      <img src="/images/sem-8.jpeg" alt="Roze bloem" />
-      <img src="/images/sem-5.jpeg" alt="Met collega" />
+    <div class="editorial__photos" data-reveal="scale">
+      <img src="/images/home-oversem-1.webp" alt="Studio" />
+      <img src="/images/home-oversem-2.webp" alt="interactieve magie" />
+      <img src="/images/home-oversem-3.webp" alt="Roze bloem" />
+      <img src="/images/home-oversem-4.webp" alt="Met collega" />
     </div>
   </div>
 </section>
 
 <section class="container section impressie">
-  <h2>Momenten van verwondering</h2>
+  <h2 data-reveal="up">Momenten van verwondering</h2>
   <div class="impressie__track">
-    <img src="/images/sem-1.jpeg" alt="Tafel magie" />
-    <img src="/images/sem-6.jpeg" alt="Balloncreaties" />
-    <img src="/images/sem-7.jpeg" alt="Witte ballon" />
-    <img src="/images/sem-4.jpeg" alt="Interactie" />
-    <img src="/images/sem-2.jpeg" alt="Podium" />
-    <img src="/images/sem-5.jpeg" alt="Circus collega" />
+    <img src="/images/home-carousel-1.webp" alt="Tafel magie" />
+    <img src="/images/home-carousel-2.webp" alt="Balloncreaties" />
+    <img src="/images/home-carousel-3.webp" alt="Witte ballon" />
+    <img src="/images/home-carousel-4.webp" alt="Interactie" />
+    <img src="/images/home-carousel-5.webp" alt="Podium" />
+    <img src="/images/home-carousel-6.webp" alt="Circus collega" />
+    <img src="/images/home-carousel-1.webp" alt="" aria-hidden="true" />
+    <img src="/images/home-carousel-2.webp" alt="" aria-hidden="true" />
+    <img src="/images/home-carousel-3.webp" alt="" aria-hidden="true" />
+    <img src="/images/home-carousel-4.webp" alt="" aria-hidden="true" />
+    <img src="/images/home-carousel-5.webp" alt="" aria-hidden="true" />
+    <img src="/images/home-carousel-6.webp" alt="" aria-hidden="true" />
   </div>
 </section>
 
 <section class="container section testimonials">
-  <h2>Verwondering die nog lang wordt herinnerd</h2>
+  <h2 data-reveal="up">Verwondering die nog lang wordt herinnerd</h2>
   <div class="testimonials__grid">
-    <div class="testimonials__card"><div class="quote-mark">"</div><p>Sem is een gedreven en professionele artiest. Met zijn Table Magic weet hij de gasten van de eerste tot de laatste minuut te verwonderen. Een absolute aanrader!</p><div class="author"><img src="/images/sem-9.jpeg" alt="Alex" />— Alex Sijm</div></div>
-    <div class="testimonials__card"><div class="quote-mark">"</div><p>Wat een fantastische connectie weet Sem met zijn publiek te maken. Zowel kinderen als volwassenen worden meegezogen in zijn enthousiasme, humor en fantastische goochelkunsten.</p><div class="author"><img src="/images/sem-3.jpeg" alt="Esmee" />— Esmee Frederiks</div></div>
-    <div class="testimonials__card"><div class="quote-mark">"</div><p>De verbaasde blikken na een truc, het uitbundige gelach en een zeer verdiend applaus zeiden alles over het succesvolle optreden van Sem!</p><div class="author"><img src="/images/sem-5.jpeg" alt="VV" />— Voetbalvereniging Opperdoes</div></div>
+    <div class="testimonials__card" data-reveal="scale"><div class="quote-mark">"</div><p>Sem is een gedreven en professionele artiest. Met zijn Table Magic weet hij de gasten van de eerste tot de laatste minuut te verwonderen. Een absolute aanrader!</p><div class="author">- Alex Sijm</div></div>
+    <div class="testimonials__card" data-reveal="scale"><div class="quote-mark">"</div><p>Wat een fantastische connectie weet Sem met zijn publiek te maken. Zowel kinderen als volwassenen worden meegezogen in zijn enthousiasme, humor en fantastische goochelkunsten.</p><div class="author">- Esmee Frederiks</div></div>
+    <div class="testimonials__card" data-reveal="scale"><div class="quote-mark">"</div><p>De verbaasde blikken na een truc, het uitbundige gelach en een zeer verdiend applaus zeiden alles over het succesvolle optreden van Sem!</p><div class="author">- Voetbalvereniging Opperdoes</div></div>
   </div>
-  <div class="testimonials__cta"><a href="#boeken" class="cta-primary">Word jij de volgende verwondering?</a></div>
+  <div class="testimonials__cta" data-reveal="up"><a href="#boeken" class="cta-primary">Word jij de volgende verwondering?</a></div>
 </section>
 
-<section id="boeken" class="contact">
-  <div class="container contact__inner">
-    <div>
-      <h2 class="contact__title">Een optreden waar nog lang over wordt nagepraat</h2>
-      <p class="contact__subtitle">Vertel wat u organiseert en ontdek welke act het beste past bij uw evenement, feest of gezelschap.</p>
-      <div class="contact__images"><img src="/images/sem-3.jpeg" alt="Sem performance" /><img src="/images/sem-4.jpeg" alt="Sem performance" /><img src="/images/sem-5.jpeg" alt="Sem performance" /></div>
-      <div class="contact__trust"><span>⚡ Reactie binnen 2 uur</span><span>✓ Geen verplichtingen</span><span>★ Onlangs geboekt in Alkmaar</span></div>
-    </div>
-    <form class="contact__form">
-      <select class="contact__form-select"><option>Wat organiseer je?</option><option>Bruiloft</option><option>Bedrijfsfeest</option><option>Kinderfeest</option><option>Circus / Festival</option></select>
-      <input type="email" placeholder="Je e-mailadres" required class="contact__form-input" />
-      <input type="text" placeholder="Datum en aantal gasten" class="contact__form-input" />
-      <button type="submit" class="cta-primary contact__form-submit">Check beschikbaarheid</button>
-      <div class="contact__form-note contact__form-note--small">Gemiddeld 4.9 ★ uit 200+ shows</div>
-    </form>
-  </div>
-</section>
+
 </PageLayout>

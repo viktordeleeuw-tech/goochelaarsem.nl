@@ -5,46 +5,51 @@ import '../styles/components/_pages.scss';
 
 <PageLayout title="Kindershows">
   <section class="container show-hero section">
-    <div>
+    <div data-reveal-onload="left">
       <h1 class="hero__title">Kindershows</h1>
       <p class="hero__sub">Kinderen wanen zich in een fantasie vol magie, humor en verwondering. Van bloemen tot ballondieren—live gemaakt waar ze bij staan.</p>
       <a href="#boeken" class="cta-primary">Boek een Kindershow</a>
     </div>
-    <div class="hero__collage">
-      <img class="main" src="/images/sem-3.jpeg" alt="Kindershows" />
+    <div class="hero__collage" data-reveal-onload="right">
+      <img class="main" src="/images/kindershow-hero.webp" alt="Kindershows" />
     </div>
   </section>
 
+  <section class="container section show-story">
+    <img class="show-story__image" src="/images/Logo-BalloonMagic.webp" alt="Ballonkunst" data-reveal="bottom" />
+    <p class="editorial__text" data-reveal="up">Tijdens de Ballon Magic Kindershow verzorgt Sem Houtenbos een interactieve voorstelling vol magie, humor, ballonfiguren en verrassingen. In deze ruim 45 minuten durende show worden de meest bijzondere goocheltrucs gecombineerd met grappige momenten en veel interactie met het publiek.</p>
+    <p data-reveal="up">Kinderen worden actief betrokken bij de show en mogen zelfs meehelpen tijdens verschillende magische acts. Natuurlijk hoort daar ook een beloning bij: ieder kind dat helpt ontvangt een prachtig ballonfiguur waar ze gegarandeerd van zullen genieten!</p>
+    <p data-reveal="up">Maar dat is nog niet alles…</p>
+    <p data-reveal="up">De show eindigt met een grote en kleurrijke ballonnenfinale. Tijdens deze finale mogen de kinderen raden welk ballonfiguur Sem aan het maken is. Wie het juiste antwoord geeft, ontvangt als beloning een extra bijzonder ballonfiguur!</p>
+    <h3 data-reveal="up">Praktische informatie</h3>
+    <ul data-reveal="up">
+      <li>Duur van de show: 1 x 45 minuten</li>
+      <li>Geschikt voor kinderen en families</li>
+      <li>Inclusief decor van 3x3x4</li>
+      <li>Ook perfect voor een Sinterklaas (voor)programma</li>
+    </ul>
+    <h3 data-reveal="up">Waarom BalloonMagic?</h3>
+    <ul data-reveal="up">
+      <li> Geen massaproductie maar prachtige Ballonfiguren</li>
+      <li>Interactief</li>
+      <li>De ballonnen zijn 100% biologisch afbreekbaar</li>
+    </ul>
+  </section>
   <section class="container show-section section">
-    <h2 class="show-section__title">Perfect voor elk kinderevenement</h2>
+    <h2 class="show-section__title" data-reveal="up">Perfect voor elk kinderevenement</h2>
     <div class="show-section__grid">
-      <div class="show-section__item">
+      <div class="show-section__item" data-reveal="up">
         <h3>Kinderfeestjes</h3>
         <p>Magie, interactie en veel plezier voor alle leeftijden.</p>
       </div>
-      <div class="show-section__item">
+      <div class="show-section__item" data-reveal="up">
         <h3>Scholen & Bibliotheken</h3>
         <p>Educatief entertainment dat kinderen inspireert.</p>
       </div>
-      <div class="show-section__item">
+      <div class="show-section__item" data-reveal="up">
         <h3>Familiegebeurtenissen</h3>
         <p>Iedereen staat versteld van de creaties en trucs.</p>
       </div>
-    </div>
-  </section>
-
-  <section id="boeken" class="contact">
-    <div class="container contact__inner">
-      <div>
-        <h2 class="contact__title">Plan een Kindershow in</h2>
-        <p class="contact__subtitle">Maak van je evenement een onvergetelijke dag vol magie en plezier.</p>
-      </div>
-      <form class="contact__form">
-        <input type="text" placeholder="Je naam" required class="contact__form-input" />
-        <input type="email" placeholder="Je e-mailadres" required class="contact__form-input" />
-        <input type="text" placeholder="Aantal kinderen en leeftijden" class="contact__form-input" />
-        <button type="submit" class="cta-primary contact__form-submit">Vraag informatie aan</button>
-      </form>
     </div>
   </section>
 </PageLayout>

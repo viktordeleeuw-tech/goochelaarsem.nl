@@ -1,0 +1,81 @@
+
+// Scroll-reveal: elements fade/slide in once when scrolled into view.
+// JS (PageLayout.astro) adds .reveal-pending on load, then .is-visible via IntersectionObserver.
+// No JS -> class never added -> content stays fully visible by default.
+[data-reveal].reveal-pending {
+  opacity: 0;
+  transition: opacity 900ms cubic-bezier(0.16, 1, 0.3, 1), transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+
+  &[data-reveal="up"] { transform: translateY(56px); }
+  &[data-reveal="left"] { transform: translateX(-72px) rotate(var(--rotate, 0deg)); }
+  &[data-reveal="right"] { transform: translateX(72px) rotate(var(--rotate, 0deg)); }
+  &[data-reveal="scale"] { transform: scale(0.85) rotate(var(--rotate, 0deg)); }
+
+  &.is-visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(var(--rotate, 0deg));
+  }
+}
+
+// Stagger direct children inside repeating grids/strips.
+.portfolio__grid,
+.show-section__grid,
+.testimonials__grid,
+.contact-methods__grid,
+.impressie__track {
+  > [data-reveal] {
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) { --reveal-delay: #{($i - 1) * 120}ms; }
+    }
+  }
+}
+
+// Users who ask the OS to reduce motion still get a quick fade (accessible,
+// non-disorienting) instead of the large slide/scale, and instead of nothing at all.
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal].reveal-pending {
+    transform: none;
+    transition: opacity 300ms ease;
+    transition-delay: var(--reveal-delay, 0ms);
+
+    &.is-visible { transform: none; }
+  }
+}
+
+// Above-the-fold content (hero, page headers) is visible from the very first
+// frame, so it can't wait for a scroll to trigger — and JS timing (rAF,
+// IntersectionObserver's first callback) turns out to be unreliable for
+// content already in view on some devices/browsers. A plain CSS animation
+// has no such timing dependency: the browser runs it as soon as it paints.
+[data-reveal-onload] {
+  animation: reveal-onload-fade 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal-onload="left"] { animation-name: reveal-onload-left; }
+[data-reveal-onload="right"] { animation-name: reveal-onload-right; }
+[data-reveal-onload="up"] { animation-name: reveal-onload-up; }
+
+@keyframes reveal-onload-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes reveal-onload-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes reveal-onload-left {
+  from { opacity: 0; transform: translateX(-100%) rotate(var(--rotate, 0deg)); }
+  to { opacity: 1; transform: translateX(0) rotate(var(--rotate, 0deg)); }
+}
+@keyframes reveal-onload-right {
+  from { opacity: 0; transform: translateX(100%) rotate(var(--rotate, 0deg)); }
+  to { opacity: 1; transform: translateX(0) rotate(var(--rotate, 0deg)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal-onload] {
+    animation-name: reveal-onload-fade;
+    animation-duration: 300ms;
+  }
+}

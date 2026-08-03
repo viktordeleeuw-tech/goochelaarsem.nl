@@ -13,7 +13,15 @@
   }
 }
 .impressie{overflow:hidden;
-  &__track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:20px;
-    img{scroll-snap-align:start;min-width:320px;height:400px;border-radius:$radius-xl;flex-shrink:0}
+  &__track{display:flex;gap:16px;width:max-content;padding-bottom:20px;
+    animation:impressie-scroll 70s linear infinite;
+    img{min-width:320px;height:400px;border-radius:$radius-xl;flex-shrink:0}
   }
+}
+@keyframes impressie-scroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+@media (prefers-reduced-motion:reduce){
+  .impressie__track{animation:none;overflow-x:auto}
 }

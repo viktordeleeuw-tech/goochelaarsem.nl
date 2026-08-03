@@ -5,25 +5,36 @@ import '../styles/components/_pages.scss';
 
 <PageLayout title="Contact">
   <section class="container contact-hero">
-    <div class="contact-hero__inner">
+    <div class="contact-hero__inner" data-reveal-onload="up">
       <h1 class="contact-hero__title">Laten we in contact gaan</h1>
       <p class="contact-hero__subtitle">Vertel wat je organiseert en ontdek welke act het beste past bij jouw evenement.</p>
 
       <form class="contact__form">
         <div class="contact__form-group">
-          <label class="contact__form-label">Wat organiseer je?</label>
-          <select class="contact__form-select">
-            <option>Selecteer een optie</option>
-            <option>Bruiloft</option>
-            <option>Bedrijfsfeest</option>
-            <option>Kinderfeest</option>
-            <option>Circus / Festival</option>
-            <option>Ander evenement</option>
+          <label class="contact__form-label">Welke show kies je?</label>
+          <select class="contact__form-select" required>
+            <option value="">Selecteer een optie</option>
+            <option value="Table Magic">Table Magic</option>
+            <option value="Kindershows">Kindershows</option>
+            <option value="Ballon Magic">Ballon Magic</option>
+            <option value="Circus Show">Circus Show</option>
           </select>
         </div>
 
         <div class="contact__form-group">
-          <label class="contact__form-label">Je naam</label>
+          <label class="contact__form-label">Wat organiseer je?</label>
+          <select class="contact__form-select" required>
+            <option value="">Selecteer een optie</option>
+            <option value="Bruiloft">Bruiloft</option>
+            <option value="Bedrijfsfeest">Bedrijfsfeest</option>
+            <option value="Kinderfeest">Kinderfeest</option>
+            <option value="Circus / Festival">Circus / Festival</option>
+            <option value="Ander evenement">Ander evenement</option>
+          </select>
+        </div>
+
+        <div class="contact__form-group">
+          <label class="contact__form-label">Naam</label>
           <input type="text" placeholder="Volledige naam" required class="contact__form-input" />
         </div>
 
@@ -32,14 +43,15 @@ import '../styles/components/_pages.scss';
           <input type="email" placeholder="jij@voorbeeld.nl" required class="contact__form-input" />
         </div>
 
-        <div class="contact__form-group">
-          <label class="contact__form-label">Datum en aantal gasten</label>
-          <input type="text" placeholder="bijv. 15 juni 2025 • 50 gasten" required class="contact__form-input" />
-        </div>
-
-        <div class="contact__form-group">
-          <label class="contact__form-label">Bericht (optioneel)</label>
-          <textarea placeholder="Vertel meer over je evenement..." class="contact__form-textarea"></textarea>
+        <div class="contact__form-row">
+          <div class="contact__form-group">
+            <label class="contact__form-label">Datum</label>
+            <input type="text" placeholder="bijv. 15 juni 2025" class="contact__form-input" />
+          </div>
+          <div class="contact__form-group">
+            <label class="contact__form-label">Aantal gasten</label>
+            <input type="number" min="1" placeholder="bijv. 50" class="contact__form-input" />
+          </div>
         </div>
 
         <button type="submit" class="cta-primary contact__form-submit">Check beschikbaarheid</button>
@@ -49,22 +61,22 @@ import '../styles/components/_pages.scss';
   </section>
 
   <section class="container contact-methods section">
-    <h2 class="contact-methods__title">Andere manieren om contact op te nemen</h2>
+    <h2 class="contact-methods__title" data-reveal="up">Andere manieren om contact op te nemen</h2>
 
     <div class="contact-methods__grid">
-      <div class="contact-methods__item">
+      <div class="contact-methods__item" data-reveal="up">
         <p class="contact-methods__icon">📧</p>
         <h3 class="contact-methods__heading">E-mail</h3>
         <a href="mailto:v.deleeuw@upcmail.nl" class="contact-methods__link">v.deleeuw@upcmail.nl</a>
       </div>
 
-      <div class="contact-methods__item">
+      <div class="contact-methods__item" data-reveal="up">
         <p class="contact-methods__icon">📱</p>
         <h3 class="contact-methods__heading">WhatsApp</h3>
         <p class="contact-methods__text">Snel en persoonlijk contact</p>
       </div>
 
-      <div class="contact-methods__item">
+      <div class="contact-methods__item" data-reveal="up">
         <p class="contact-methods__icon">⭐</p>
         <h3 class="contact-methods__heading">Google Reviews</h3>
         <p class="contact-methods__text">4.9 / 5 uit 200+ shows</p>
@@ -72,7 +84,7 @@ import '../styles/components/_pages.scss';
     </div>
   </section>
 
-  <section class="container contact-cta section">
+  <section class="container contact-cta section" data-reveal="up">
     <h2 class="contact-cta__title">Klaar voor magie?</h2>
     <p class="contact-cta__text">Of je nu een intieme diner nodig hebt met Table Magic of een volledige podium show—Sem zorgt voor entertainment dat je gasten nooit zullen vergeten.</p>
   </section>

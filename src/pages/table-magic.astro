@@ -5,46 +5,48 @@ import '../styles/components/_pages.scss';
 
 <PageLayout title="Table Magic">
   <section class="container show-hero section">
-    <div>
+    <div data-reveal-onload="left">
       <h1 class="hero__title">Table Magic</h1>
       <p class="hero__sub">Magie vlak voor de ogen van je gasten. Geen afstandelijke show, maar pure interactie en verwondering op centimeters afstand.</p>
       <a href="#boeken" class="cta-primary">Boek Table Magic</a>
     </div>
-    <div class="hero__collage">
-      <img class="main" src="/images/table-magic.jpg" alt="Table Magic" />
+    <div class="hero__collage" data-reveal-onload="right">
+      <img class="main" src="/images/home-table-magic.webp" alt="Table Magic" />
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="editorial__grid">
+      <div class="show-story">
+        <p class="editorial__text" data-reveal="up">Tijdens je evenement, lunch, verjaardag of bedrijfsborrel loopt Sem tussen de gasten door voor een korte, verrassende goochelact. Precies daarom is Table Magic hét klassieke onderdeel binnen het goochelen.</p>
+        <p data-reveal="up">Alles gebeurt vlak voor je ogen — en dat maakt het zo leuk. Het gevoel van verwondering blijft van begin tot eind aanwezig.</p>
+        <p data-reveal="up">Table Magic van Sem Houtenbos kun je zien als een interactieve goochelshow, maar dan aan tafel.</p>
+        <h3 data-reveal="up">Een eerlijke zakkenroller</h3>
+        <p data-reveal="up">Sem doet trucs met een pakje kaarten, ballen, munten en nog veel meer. Maar bij Table Magic gaat hij nog een stapje verder: hij steelt bijvoorbeeld je horloge. Geen zorgen — hij geeft alles keurig terug. Vandaar: een eerlijke zakkenroller.</p>
+        <p data-reveal="up">Kortom: Table Magic is een leuke, interactieve goochelshow, recht aan jouw tafel.</p>
+      </div>
+      <div class="editorial__photos" data-reveal="scale">
+        <img src="/images/Table-Magic-foto-1.webp" alt="Table Magic sfeerfoto" />
+        <img src="/images/Table-Magic-foto-2.webp" alt="Table Magic sfeerfoto" />
+      </div>
     </div>
   </section>
 
   <section class="container show-section section">
-    <h2 class="show-section__title">Waarom Table Magic?</h2>
+    <h2 class="show-section__title" data-reveal="up">Waarom Table Magic?</h2>
     <div class="show-section__grid">
-      <div class="show-section__item">
+      <div class="show-section__item" data-reveal="up">
         <h3>Intiem & Persoonlijk</h3>
         <p>Directe interactie met je gasten creëert onvergetelijke momenten.</p>
       </div>
-      <div class="show-section__item">
+      <div class="show-section__item" data-reveal="up">
         <h3>Flexibel</h3>
         <p>Perfect voor bruiloften, bedrijfsfeesten en privébijeenkomsten.</p>
       </div>
-      <div class="show-section__item">
+      <div class="show-section__item" data-reveal="up">
         <h3>Professionaliteit</h3>
         <p>Jaren van ervaring en vakmanschap in elke truc.</p>
       </div>
-    </div>
-  </section>
-
-  <section id="boeken" class="contact">
-    <div class="container contact__inner">
-      <div>
-        <h2 class="contact__title">Table Magic voor je evenement</h2>
-        <p class="contact__subtitle">Geïnteresseerd? Laat weten wat je organiseert en ontdek de mogelijkheden.</p>
-      </div>
-      <form class="contact__form">
-        <input type="text" placeholder="Je naam" required class="contact__form-input" />
-        <input type="email" placeholder="Je e-mailadres" required class="contact__form-input" />
-        <input type="text" placeholder="Datum en aantal gasten" class="contact__form-input" />
-        <button type="submit" class="cta-primary contact__form-submit">Vraag een offerte aan</button>
-      </form>
     </div>
   </section>
 </PageLayout>

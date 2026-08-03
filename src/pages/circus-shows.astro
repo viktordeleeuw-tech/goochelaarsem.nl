@@ -5,46 +5,43 @@ import '../styles/components/_pages.scss';
 
 <PageLayout title="Circus Shows">
   <section class="container show-hero section">
-    <div>
+    <div data-reveal-onload="left">
       <h1 class="hero__title">Circus Shows</h1>
       <p class="hero__sub">Complete show voor het podium met humor, magie en spectaculaire acts. Perfect voor feesten, bruiloften en circusgebeurtenissen.</p>
       <a href="#boeken" class="cta-primary">Boek een Circus Show</a>
     </div>
-    <div class="hero__collage">
+    <div class="hero__collage" data-reveal-onload="right">
       <img class="main" src="/images/sem-2.jpeg" alt="Circus podium" />
     </div>
   </section>
 
+  <section class="container section show-story">
+    <p class="editorial__text" data-reveal="up">Op zoek naar een magische act vol humor en verbluffende trucs? Sem Houtenbos brengt entertainment op maat voor elk evenement!</p>
+
+    <h3 data-reveal="up">Centrale Act (tot 50 personen)</h3>
+    <p data-reveal="up">Geen podium? Geen probleem! Sem stelt zich midden tussen je gasten op en verrast hen met trucs met touwen, balletjes en… misschien verdwijnt er zelfs een horloge! Uiteraard krijgt iedereen zijn spullen netjes terug. Deze interactieve show duurt ca. 20 minuten en zorgt voor een onvergetelijke ervaring.</p>
+
+    <h3 data-reveal="up">Podium Act (vanaf 50 personen)</h3>
+    <p data-reveal="up">Voor grotere gezelschappen brengt Sem een spectaculaire podiumshow vol magie en komische verrassingen. Laat je verrassen door onmogelijke trucs met kaarten, touwen en andere objecten. Ook hier geldt: gestolen horloges worden altijd teruggegeven!</p>
+
+    <p data-reveal="up">Welke act past bij jouw evenement? Kies voor de magische beleving van Sem en laat je gasten versteld staan!</p>
+  </section>
+
   <section class="container show-section section">
-    <h2 class="show-section__title">Podium magie op maat</h2>
+    <h2 class="show-section__title" data-reveal="up">Podium magie op maat</h2>
     <div class="show-section__grid">
-      <div class="show-section__item">
+      <div class="show-section__item" data-reveal="up">
         <h3>Volledige Show</h3>
         <p>30-60 minuten pure entertainment met professionele opvoering.</p>
       </div>
-      <div class="show-section__item">
+      <div class="show-section__item" data-reveal="up">
         <h3>Humor & Interactie</h3>
         <p>Het publiek lacht, juicht en staat versteld.</p>
       </div>
-      <div class="show-section__item">
+      <div class="show-section__item" data-reveal="up">
         <h3>Professionals Setting</h3>
         <p>Geschikt voor grote evenementen en theaters.</p>
       </div>
-    </div>
-  </section>
-
-  <section id="boeken" class="contact">
-    <div class="container contact__inner">
-      <div>
-        <h2 class="contact__title">Circus Show boeken</h2>
-        <p class="contact__subtitle">Zorg voor een show die nog lang wordt herinnerd.</p>
-      </div>
-      <form class="contact__form">
-        <input type="text" placeholder="Je naam" required class="contact__form-input" />
-        <input type="email" placeholder="Je e-mailadres" required class="contact__form-input" />
-        <input type="text" placeholder="Type evenement en aantal gasten" class="contact__form-input" />
-        <button type="submit" class="cta-primary contact__form-submit">Vraag informatie aan</button>
-      </form>
     </div>
   </section>
 </PageLayout>

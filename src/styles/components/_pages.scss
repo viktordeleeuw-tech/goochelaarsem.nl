@@ -31,6 +31,15 @@
   margin-bottom: 24px;
 }
 
+.contact__form-row {
+  display: flex;
+  gap: 16px;
+
+  .contact__form-group {
+    flex: 1;
+  }
+}
+
 .contact__form-label {
   display: block;
   margin-bottom: 8px;
@@ -157,6 +166,7 @@
   display: grid;
   gap: 40px;
   padding: 80px 0;
+  overflow: hidden;
 
   @media (min-width: 1200px) {
     grid-template-columns: 1.2fr 0.8fr;
@@ -176,14 +186,19 @@
   margin-top: 24px;
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
+  flex-flow:row wrap;
 }
 
 .contact__image {
-  width: 80px;
-  height: 80px;
+  width: 30%;
+  height: auto;
   border-radius: 16px;
   object-fit: cover;
+
+    @media (min-width: 768px) {
+       width: 80px;
+       height: 80px;
+    }
 }
 
 .contact__form {
@@ -219,6 +234,36 @@
 // Show pages (table-magic, kindershows, ballon-magic, circus-shows)
 .show-hero {
   padding-top: 60px;
+
+  @media (max-width: 768px) {
+    .hero__collage {
+      margin-top: 24px;
+    }
+  }
+}
+
+.show-story {
+  max-width: 700px;
+
+  h3 {
+    margin-top: 32px;
+    font-size: 24px;
+  }
+
+  p {
+    margin-top: 16px;
+    opacity: 0.85;
+  }
+
+  ul {
+    margin-top: 16px;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 8px;
+      opacity: 0.85;
+    }
+  }
 }
 
 .show-section {
@@ -333,10 +378,17 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  
 
   img {
-    width: 80px;
-    height: 80px;
-    border-radius: 16px;
+   width: 30%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+
+    @media (min-width: 768px) {
+       width: 80px;
+       height: 80px;
+    }
   }
 }

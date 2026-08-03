@@ -5,67 +5,90 @@ import '../styles/components/_pages.scss';
 
 <PageLayout title="Reviews">
   <section class="container reviews-hero section">
-    <h1 class="reviews-hero__title">Wat zeggen onze gasten?</h1>
-    <p class="reviews-hero__subtitle">Meer dan 200 shows, tientallen onvergetelijke momenten. Lees wat onze gasten zeggen.</p>
+    <h1 class="reviews-hero__title" data-reveal-onload="up">Wat zeggen onze gasten?</h1>
+    <p class="reviews-hero__subtitle" data-reveal-onload="up" style="--reveal-delay: 120ms">Meer dan 50 shows, tientallen onvergetelijke momenten. Lees wat onze gasten zeggen.</p>
 
     <div class="testimonials__grid">
-      <div class="testimonials__card">
+      <div class="testimonials__card" data-reveal="scale">
         <div class="quote-mark">"</div>
-        <p>Sem is een gedreven en professionele artiest. Met zijn Table Magic weet hij de gasten van de eerste tot de laatste minuut te verwonderen. Een absolute aanrader!</p>
-        <div class="author"><img src="/images/sem-9.jpeg" alt="Alex" />— Alex Sijm</div>
+        <p>Sem is een gedreven en professionele artiest. Met zijn table magic weet hij de gasten van de eerste tot de laatste minuut te verwonderen. Een absolute aanrader voor ieder evenement!</p>
+        <div class="author">— Alex Sijm</div>
       </div>
-      <div class="testimonials__card">
+      <div class="testimonials__card" data-reveal="scale">
         <div class="quote-mark">"</div>
-        <p>Wat een fantastische connectie weet Sem met zijn publiek te maken. Zowel kinderen als volwassenen worden meegezogen in zijn enthousiasme, humor en fantastische goochelkunsten.</p>
-        <div class="author"><img src="/images/sem-3.jpeg" alt="Esmee" />— Esmee Frederiks</div>
+        <p>Sem kwam op de receptie van de bruiloft om kinderen én andere gasten te vermaken. Wat een fantastische connectie weet hij met zijn publiek te maken. Zijn ballonkunsten zijn oprecht magisch, de kinderen kregen niet alleen een ballonfiguur, ze kregen er een hele show vol grapjes en trucjes bij!</p>
+        <div class="author">— Esmee Frederiks</div>
       </div>
-      <div class="testimonials__card">
+      <div class="testimonials__card" data-reveal="scale">
         <div class="quote-mark">"</div>
-        <p>De verbaasde blikken na een truc, het uitbundige gelach en een zeer verdiend applaus zeiden alles over het succesvolle optreden van Sem!</p>
-        <div class="author"><img src="/images/sem-5.jpeg" alt="VV" />— Voetbalvereniging Opperdoes</div>
+        <p>Leuke ervaring voor de kids en de volwassenen. Doet het heel leuk en kan het publiek goed vermaken met zijn trucs. Absoluut een aanrader.</p>
+        <div class="author">— Jordy Clasie</div>
       </div>
-      <div class="testimonials__card">
+      <div class="testimonials__card" data-reveal="scale">
         <div class="quote-mark">"</div>
-        <p>Perfect ingespeeld op het publiek, super sympathiek en eigenlijk te genieten met iedere seconde van zijn performance.</p>
-        <div class="author"><img src="/images/sem-4.jpeg" alt="Reviews" />— Familie S.</div>
+        <p>Sem heeft recent het feest van mijn dochter heel leuk en bijzonder gemaakt. Kinderen hebben genoten en volwassenen ook. Bedankt Sem!</p>
+        <div class="author">— Aleksandra Rakovac</div>
       </div>
-      <div class="testimonials__card">
+      <div class="testimonials__card" data-reveal="scale">
         <div class="quote-mark">"</div>
-        <p>De kinderen konden hun ogen niet geloven! Sem heeft ze helemaal betoverd met zijn creaties en zijn warme uitstraling.</p>
-        <div class="author"><img src="/images/sem-1.jpeg" alt="Reviews" />— Keuzeclub ABC</div>
+        <p>Bijzondere opluistering van ons 35 jaar jubileum. Tijdens de bbq heeft Sem zeer vermakelijke magische trucs getoond met veel humor. Zeer professionele instelling en uitvoering. Topper is het.</p>
+        <div class="author">— Delta Duikteam</div>
       </div>
-      <div class="testimonials__card">
+      <div class="testimonials__card" data-reveal="scale">
         <div class="quote-mark">"</div>
-        <p>Een professioneel optreden met veel aandacht voor detail. Sem zorgt niet alleen voor entertainment, maar ook voor sfeer.</p>
-        <div class="author"><img src="/images/sem-6.jpeg" alt="Reviews" />— Bruiloft M & R</div>
+        <p>Op Hemelvaartsdag organiseerden wij een kamp voor de kids van 8 tot 13. Wat deed Sem het leuk! Maakte een mooie connectie met de kinderen, grapjes en trucs waar je mond van open valt. Echt als we nog eens een goochelaar nodig hebben weet ik je te vinden!</p>
+        <div class="author">— S.V. Vrone</div>
       </div>
-    </div>
-  </section>
-
-  <section id="boeken" class="contact">
-    <div class="container contact__inner">
-      <div>
-        <h2 class="contact__title">Wil jij Sem boeken?</h2>
-        <p class="contact__subtitle">Laat weten wat je organiseert en we checken de beschikbaarheid.</p>
-        <div class="contact__images">
-          <img src="/images/sem-3.jpeg" alt="Sem performance" class="contact__image" />
-          <img src="/images/sem-4.jpeg" alt="Sem performance" class="contact__image" />
-          <img src="/images/sem-5.jpeg" alt="Sem performance" class="contact__image" />
-        </div>
+      <div class="testimonials__card" data-reveal="scale">
+        <div class="quote-mark">"</div>
+        <p>Sem trad twee weken geleden op tijdens onze jaarlijkse avond voor vrijwilligers van onze voetbalvereniging. De verbaasde blikken na een truc, het uitbundige gelach en een zeer verdiend applaus zeiden alles over het succesvolle optreden van Sem!</p>
+        <div class="author">— Voetbalvereniging Opperdoes</div>
       </div>
-      <form class="contact__form">
-        <select class="contact__form-select">
-          <option>Wat organiseer je?</option>
-          <option>Bruiloft</option>
-          <option>Bedrijfsfeest</option>
-          <option>Kinderfeest</option>
-          <option>Circus / Festival</option>
-        </select>
-        <input type="email" placeholder="Je e-mailadres" required class="contact__form-input" />
-        <input type="text" placeholder="Datum en aantal gasten" class="contact__form-input" />
-        <button type="submit" class="cta-primary contact__form-submit">Check beschikbaarheid</button>
-        <div class="contact__form-note contact__form-note--small">Gemiddeld 4.9 ★ uit 200+ shows</div>
-      </form>
+      <div class="testimonials__card" data-reveal="scale">
+        <div class="quote-mark">"</div>
+        <p>We hadden Sem geboekt met het tafelgoochelen! Het was super goed en ik snapte er niks van. Bedankt Sem!</p>
+        <div class="author">— Milan</div>
+      </div>
+      <div class="testimonials__card" data-reveal="scale">
+        <div class="quote-mark">"</div>
+        <p>Afgelopen zondag hadden wij Sem geboekt. Hij deed tafelgoochelen. Wat was het goed! Hij had zelfs nog een horloge van iemand weten af te pakken. Bedankt Sem!</p>
+        <div class="author">— Leo</div>
+      </div>
+      <div class="testimonials__card" data-reveal="scale">
+        <div class="quote-mark">"</div>
+        <p>Sem heeft zijn Centrale show van 15 minuten gedaan! En tafelgoochelen deed hij daarbij! Het was echt geweldig goede trucs en veel humor! Volgend jaar boeken we je zeker weer!</p>
+        <div class="author">— Jan</div>
+      </div>
+      <div class="testimonials__card" data-reveal="scale">
+        <div class="quote-mark">"</div>
+        <p>Sem heeft ons verbluft met zijn kunnen op de 10e versie van Franky's Kinderdag te Hengelo. Wij hebben specifiek gekozen voor een jeugdige goochelaar wat perfect paste op dit kinderevent.</p>
+        <div class="author">— Edwin</div>
+      </div>
+      <div class="testimonials__card" data-reveal="scale">
+        <div class="quote-mark">"</div>
+        <p>Keer op keer blijft ie me verbazen! Ga zo door!</p>
+        <div class="author">— Dano</div>
+      </div>
+      <div class="testimonials__card" data-reveal="scale">
+        <div class="quote-mark">"</div>
+        <p>Sem liet ons verbazen met zijn act. Het was een hele leuke avond. En we snappen nog steeds niet hoe hij die kaart liet veranderen! Volgend jaar boeken we hem zeker weer!</p>
+        <div class="author">— Koen</div>
+      </div>
+      <div class="testimonials__card" data-reveal="scale">
+        <div class="quote-mark">"</div>
+        <p>Zeer leuke goochelshow voor volwassenen en kinderen.</p>
+        <div class="author">— Luna</div>
+      </div>
+      <div class="testimonials__card" data-reveal="scale">
+        <div class="quote-mark">"</div>
+        <p>We hadden op 18 juni een geweldige avond! Zijn truc met het kaartspel dat omhoog kwam was bizar! Sem zijn tafelgoochelshow is geweldig!</p>
+        <div class="author">— Jan</div>
+      </div>
+      <div class="testimonials__card" data-reveal="scale">
+        <div class="quote-mark">"</div>
+        <p>Sem is een erg fijne man die sterk is in wat hij doet. Hij heeft de hele familie vermaakt met zijn leuke trucjes.</p>
+        <div class="author">— Jari</div>
+      </div>
     </div>
   </section>
 </PageLayout>
