@@ -242,6 +242,7 @@ h1, h2, h3 {
   font-size: 12px;
   letter-spacing: 0.2em;
   opacity: 0.4;
+  text-transform: uppercase;
 }
 .portfolio__card__title {
   font-size: 24px;

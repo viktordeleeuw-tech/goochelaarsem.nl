@@ -8,7 +8,7 @@
     &:hover .link{color:$gold}
     &__img{height:280px;width:100%;transition:transform .6s ease;object-fit:cover}
     &__content{padding:24px;flex:1;display:flex;flex-direction:column}
-    &__num{font-family:$font-serif;font-size:12px;letter-spacing:.2em;opacity:.4}
+    &__num{font-family:$font-serif;font-size:12px;letter-spacing:.2em;opacity:.4; text-transform:uppercase}
     &__title{font-size:24px;margin:8px 0}
     &__cta{margin-top:auto;display:flex;align-items:center; flex-flow:column wrap;
       .link{font-size:14px; text-decoration:underline;text-underline-offset:4px; margin-bottom:6px;cursor:pointer;transition:color .2s ease}
