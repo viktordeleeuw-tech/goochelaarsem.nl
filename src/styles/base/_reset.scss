@@ -1,7 +1,7 @@
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;background:$bg-light}
-body{font-family:Inter,system-ui;background:$bg-light;color:$navy;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui;background:$bg-light;color:$navy;line-height:1.6;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;object-fit:cover}
 a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:$font-serif;line-height:.95;letter-spacing:-.02em}
