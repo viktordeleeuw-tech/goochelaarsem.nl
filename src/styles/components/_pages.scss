@@ -123,6 +123,7 @@
   border-radius: 16px;
   display: flex;
   flex-flow: column;
+  justify-content: center;
   align-items: center;
   padding: 24px;
   color:#fff;
@@ -301,6 +302,16 @@
 
   &:hover {
     color: var(--color-gold, #FFC94A);
+  }
+
+  &--note {
+    display: block;
+    font-size: 13px;
+    opacity: 0.6;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
   }
 }
 

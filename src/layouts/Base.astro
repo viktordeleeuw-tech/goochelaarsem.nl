@@ -1,16 +1,21 @@
 
 ---
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/playfair-display/700.css';
+import '@fontsource/playfair-display/800.css';
 import '../styles/main.scss';
+import CookieBanner from '../components/CookieBanner.astro';
 ---
 <html lang="nl">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Sem Houtenbos | Goochelaar en entertainer</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 <noscript><style>[data-reveal],[data-reveal-onload]{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
 <slot />
+<CookieBanner />
 </body>
 </html>
