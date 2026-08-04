@@ -18,7 +18,7 @@ const { title, description } = Astro.props;
   </main>
   <section id="boeken" class="contact">
   <div class="container contact__inner">
-    <div data-reveal="left">
+    <div>
       <h2 class="contact__title">Een optreden waar nog lang over wordt nagepraat</h2>
       <p class="contact__subtitle">Vertel wat u organiseert en ontdek welke act het beste past bij uw evenement, feest of gezelschap.</p>
       <div class="contact__info desktop">
@@ -44,7 +44,7 @@ const { title, description } = Astro.props;
         </div>
       </div>
     </div>
-    <form class="contact__form" data-reveal="right">
+    <form class="contact__form">
       <select class="contact__form-select" required>
         <option value="">Welke show kies je?</option>
         <option value="Table Magic">Table Magic</option>
@@ -63,7 +63,7 @@ const { title, description } = Astro.props;
       <button type="submit" class="cta-primary contact__form-submit">Check beschikbaarheid</button>
       <!-- <div class="contact__form-note contact__form-note--small">Gemiddeld 4.9 ★ uit 200+ shows</div> -->
     </form>
-    <div class="contact__info mobile" data-reveal="up">
+    <div class="contact__info mobile">
         <address class="contact__address">
           <p>Sem Houtenbos</p>
           <p> P.C. Boutensstraat 128</p>
