@@ -5,10 +5,9 @@ import '../styles/components/_page-layout.scss';
 
 interface Props {
   title?: string;
-  hideBooking?: boolean;
 }
 
-const { title, hideBooking = false } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <Base>
@@ -16,7 +15,6 @@ const { title, hideBooking = false } = Astro.props;
   <main>
     <slot />
   </main>
-  {!hideBooking && (
   <section id="boeken" class="contact">
   <div class="container contact__inner">
     <div data-reveal="left">
@@ -94,7 +92,6 @@ const { title, hideBooking = false } = Astro.props;
       </div>
   </div>
 </section>
-  )}
   <footer class="footer">
     <div class="container footer__inner">
       <div>
@@ -115,8 +112,6 @@ const { title, hideBooking = false } = Astro.props;
   } else if (!('IntersectionObserver' in window)) {
     items.forEach((el) => el.classList.add('is-visible'));
   } else {
-    items.forEach((el) => el.classList.add('reveal-pending'));
-
     const isInInitialViewport = (el) => {
       const r = el.getBoundingClientRect();
       return r.top < window.innerHeight && r.bottom > 0;
