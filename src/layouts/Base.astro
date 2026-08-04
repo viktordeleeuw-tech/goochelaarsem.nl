@@ -6,12 +6,59 @@ import '@fontsource/playfair-display/700.css';
 import '@fontsource/playfair-display/800.css';
 import '../styles/main.scss';
 import CookieBanner from '../components/CookieBanner.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL('/images/hero-goochelaaarsem.jpg', Astro.site);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'EntertainmentBusiness',
+  name: 'Sem Houtenbos',
+  description: 'Goochelaar, entertainer en ballonkunstenaar voor evenementen, feesten en partijen.',
+  url: Astro.site?.toString(),
+  telephone: '+31622471896',
+  email: 'info@semhoutenbos.nl',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'P.C. Boutensstraat 128',
+    postalCode: '1822 KK',
+    addressLocality: 'Alkmaar',
+    addressCountry: 'NL',
+  },
+  sameAs: [
+    'https://www.instagram.com/goochelaar_sem/',
+    'https://www.facebook.com/profile.php?id=100078664136443',
+  ],
+};
 ---
 <html lang="nl">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sem Houtenbos | Goochelaar en entertainer</title>
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:image" content={ogImageURL} />
+<meta property="og:locale" content="nl_NL" />
+<meta property="og:site_name" content="Sem Houtenbos" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageURL} />
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
 </head>
 <body>
 <noscript><style>[data-reveal],[data-reveal-onload]{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>

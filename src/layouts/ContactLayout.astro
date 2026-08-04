@@ -2,9 +2,16 @@
 import Base from './Base.astro';
 import Navigation from '../components/Navigation.astro';
 import '../styles/components/_page-layout.scss';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
 ---
 
-<Base>
+<Base title={title} description={description}>
   <Navigation />
   <main>
     <slot />

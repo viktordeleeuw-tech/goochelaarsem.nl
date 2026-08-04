@@ -1,0 +1,19 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import '../styles/components/_pages.scss';
+---
+
+<PageLayout
+  title="Pagina niet gevonden | Sem Houtenbos"
+  description="Deze pagina bestaat niet (meer). Ga terug naar de homepage van Sem Houtenbos."
+>
+  <section class="container reviews-hero section">
+    <h1 class="reviews-hero__title" data-reveal-onload="up">Poef! Deze pagina is verdwenen</h1>
+    <p class="reviews-hero__subtitle" data-reveal-onload="up" style="--reveal-delay: 120ms">
+      Zelfs Sem krijgt 'm niet teruggetoverd. De pagina die je zoekt staat hier waarschijnlijk niet (meer).
+    </p>
+    <div style="text-align:center; --reveal-delay: 240ms" data-reveal-onload="up">
+      <a href="/" class="cta-primary">Terug naar de homepage</a>
+    </div>
+  </section>
+</PageLayout>
