@@ -103,6 +103,8 @@ body:has(.nav-toggle-checkbox:checked) {
   width: 100vw;
   height: 100vh;
   min-height: 100vh;
+  height: 100dvh;
+  min-height: 100dvh;
   flex-direction: column;
   gap: 0;
   padding: 84px 28px 40px;
