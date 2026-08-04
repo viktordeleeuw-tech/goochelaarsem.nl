@@ -16,6 +16,21 @@
     span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.6}
   }
 }
+// Homepage "over Sem" sectie — losstaand van .editorial (gebruikt door de show-subpagina's)
+.about{background:$bg-muted;
+  &__grid{display:grid;gap:60px;align-items: center;;@include respond($bp-lg){grid-template-columns:1fr 1fr}}
+  &__text{font-size:18px;
+    &::first-letter{font-family:$font-serif;font-size:72px;float:left;line-height:.8;margin-right:12px;color:$navy}
+  }
+  &__photos{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px;
+    img{width:100%;height:auto;display:block;border-radius:$radius-xl;box-shadow:$shadow-soft;transition:transform .3s ease,z-index 0s;position:relative;
+      // &:nth-child(1){transform:rotate(-4deg);z-index:1;&:hover{transform:rotate(-4deg) scale(1.04);z-index:4}}
+      // &:nth-child(2){transform:rotate(4deg) translateY(50px);margin-left:-18%;z-index:2;&:hover{transform:rotate(4deg) translateY(50px) scale(1.04);z-index:4}}
+      // &:nth-child(3){transform:rotate(-3deg) translateY(-60px);margin-top:-70px;margin-left:10%;z-index:3;&:hover{transform:rotate(-3deg) translateY(-60px) scale(1.04);z-index:4}}
+      // &:nth-child(4){transform:rotate(3deg) translateY(-30px);margin-left:-10%;z-index:2;&:hover{transform:rotate(3deg) translateY(-30px) scale(1.04);z-index:4}}
+    }
+  }
+}
 .impressie{overflow:hidden;
   &__track{display:flex;gap:16px;width:max-content;padding-bottom:20px;
     animation:impressie-scroll 70s linear infinite;

@@ -20,8 +20,28 @@ const { title } = Astro.props;
     <div data-reveal="left">
       <h2 class="contact__title">Een optreden waar nog lang over wordt nagepraat</h2>
       <p class="contact__subtitle">Vertel wat u organiseert en ontdek welke act het beste past bij uw evenement, feest of gezelschap.</p>
-      <div class="contact__images"><img src="/images/home-oversem-1.webp" alt="Sem performance" /><img src="/images/hero-goochelaarsem-overlay-2.webp" alt="Sem performance" /><img src="/images/home-oversem-2.webp" alt="Sem performance" /></div>
-      <div class="contact__trust"><span>✓ Geen verplichtingen</span><span>★ Onlangs geboekt in Alkmaar</span></div>
+      <div class="contact__info desktop">
+        <address class="contact__address">
+          <p>Sem Houtenbos</p>
+          <p> P.C. Boutensstraat 128</p>
+          <p>1822 KK Alkmaar</p>
+          <p>Kvk: 95270639</p>
+        </address>
+        <div class="contact__methods">
+          <a href="mailto:info@semhoutenbos.nl" class="contact__method">info@semhoutenbos.nl</a>
+          <a href="mailto:info@balloon-magic.nl" class="contact__method">info@balloon-magic.nl</a>
+          <a href="tel:+31622471896" class="contact__method">Tel: +31 6 22 47 18 96</a>
+          <a href="https://wa.me/31622471896" class="contact__method" target="_blank" rel="noopener noreferrer">Whatsapp: +31 6 22 47 18 96</a>
+          <div class="contact__socials">
+            <a href="https://www.instagram.com/goochelaar_sem/" class="contact__social" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100078664136443" class="contact__social" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="-2.7 -2.7 21.3 21.3" fill="currentColor" aria-hidden="true"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     <form class="contact__form" data-reveal="right">
       <select class="contact__form-select" required>
@@ -48,6 +68,28 @@ const { title } = Astro.props;
       <button type="submit" class="cta-primary contact__form-submit">Check beschikbaarheid</button>
       <!-- <div class="contact__form-note contact__form-note--small">Gemiddeld 4.9 ★ uit 200+ shows</div> -->
     </form>
+    <div class="contact__info mobile" data-reveal="up">
+        <address class="contact__address">
+          <p>Sem Houtenbos</p>
+          <p> P.C. Boutensstraat 128</p>
+          <p>1822 KK Alkmaar</p>
+          <p>Kvk: 95270639</p>
+        </address>
+        <div class="contact__methods">
+          <a href="mailto:info@semhoutenbos.nl" class="contact__method">info@semhoutenbos.nl</a>
+          <a href="mailto:info@balloon-magic.nl" class="contact__method">info@balloon-magic.nl</a>
+          <a href="tel:+31622471896" class="contact__method">Tel: +31 6 22 47 18 96</a>
+          <a href="https://wa.me/31622471896" class="contact__method" target="_blank" rel="noopener noreferrer">Whatsapp: +31 6 22 47 18 96</a>
+          <div class="contact__socials">
+            <a href="https://www.instagram.com/goochelaar_sem/" class="contact__social" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100078664136443" class="contact__social" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="-2.7 -2.7 21.3 21.3" fill="currentColor" aria-hidden="true"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
   </div>
 </section>
   <footer class="footer">
