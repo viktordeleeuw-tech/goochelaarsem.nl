@@ -53,3 +53,12 @@ import '../styles/components/_navigation.scss';
     <a href="/contact" class="nav-cta nav-cta--desktop">Beschikbaarheid Checken</a>
   </div>
 </nav>
+
+<script>
+  const navToggle = document.getElementById('nav-toggle') as HTMLInputElement | null;
+  document.querySelectorAll('.nav-menu a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (navToggle) navToggle.checked = false;
+    });
+  });
+</script>
