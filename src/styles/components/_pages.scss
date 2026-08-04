@@ -105,9 +105,13 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   max-width: 900px;
   margin: 0 auto;
+
+    @media (min-width: 768px) {
+       gap: 20px;
+    }
 }
 
 .contact-methods__item {
@@ -119,7 +123,7 @@
   align-items: center;
   padding: 24px;
   color:#fff;
-  width:47%;
+  width:100%;
 
      @media (min-width: 768px) {
   width:31%;
