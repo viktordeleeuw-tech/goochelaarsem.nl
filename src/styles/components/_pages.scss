@@ -83,6 +83,9 @@
 // dezelfde navy kaart als het gedeelde formulier.
 .contact-hero .contact__form {
   background: #0b1225;
+  // Ondoorzichtige achtergrond maakt de blur van de basisregel onzichtbaar,
+  // maar kost Safari/Chrome op mobiel nog wel GPU-tijd — onnodig hier.
+  backdrop-filter: none;
 
   .contact__form-label,
   .contact__form-note {
@@ -349,32 +352,6 @@
   margin-top: 8px;
   font-size: 12px;
   opacity: 0.6;
-}
-
-// Contact-pagina: verberg het formulier in de gedeelde #boeken-sectie en laat
-// de contactinfo de volle breedte gebruiken. :has(.contact-hero) matcht alleen
-// wanneer de contactpagina zelf gerenderd is, dus andere pagina's blijven ongemoeid.
-body:has(.contact-hero) #boeken {
-  .contact__form {
-    display: none;
-  }
-
-  .contact__inner {
-    grid-template-columns: 1fr;
-  }
-
-  .contact__info {
-   
-
-     @media (min-width: 768px) {
-      justify-content: center;
-     }
-  }
-
-  .contact__title,
-  .contact__subtitle {
-    text-align: center;
-  }
 }
 
 // Show pages (table-magic, kindershows, ballon-magic, circus-shows)
