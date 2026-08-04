@@ -6,9 +6,6 @@
 
 html {
   scroll-behavior: smooth;
-  background: #f9f9f9;
-  margin:0;
-  padding:0;
 }
 
 body {
@@ -17,7 +14,6 @@ body {
   color: #0b1225;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 
 img {
