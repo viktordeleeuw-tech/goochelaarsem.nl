@@ -46,7 +46,7 @@ const { title, description } = Astro.props;
     </div>
     <form class="contact__form">
       <select class="contact__form-select" required>
-        <option value="">Welke show kies je?</option>
+        <option value="">Ik wil deze act:</option>
         <option value="Table Magic">Table Magic</option>
         <option value="Kindershows">Kindershows</option>
         <option value="BalloonMagic">BalloonMagic</option>
@@ -54,10 +54,10 @@ const { title, description } = Astro.props;
       </select>
       <input type="text" placeholder="Naam" required class="contact__form-input" />
       <input type="email" placeholder="Je e-mailadres" required class="contact__form-input" />
-      <input type="text" placeholder="Plaats" class="contact__form-input" />
+      <input type="tel" placeholder="Je telefoonnummer" required class="contact__form-input" />
       <div class="contact__form-row">
+        <input type="text" placeholder="Plaats" class="contact__form-input" />
         <input type="text" placeholder="Datum" class="contact__form-input" />
-        <input type="number" min="1" placeholder="Aantal gasten" class="contact__form-input" />
       </div>
       <textarea placeholder="Bericht" class="contact__form-input contact__form-textarea"></textarea>
       <button type="submit" class="cta-primary contact__form-submit">Check beschikbaarheid</button>

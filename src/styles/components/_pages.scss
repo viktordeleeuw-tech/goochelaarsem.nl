@@ -59,6 +59,13 @@
   font-size: 16px;
 }
 
+.contact__form-select {
+  // Zonder dit gebruikt de uitgeklapte optielijst in Edge/Chrome de
+  // systeem-achtergrond (wit) terwijl de tekstkleur wel wordt geërfd (wit) —
+  // dit dwingt de browser het donkere systeemthema voor formuliervelden te gebruiken.
+  color-scheme: dark;
+}
+
 .contact__form-textarea {
   min-height: 120px;
   resize: vertical;
@@ -352,10 +359,14 @@
     color: #fff;
     margin-bottom: 12px;
     font-family: inherit;
+  }
 
-    &::placeholder {
-      color: rgba(255, 255, 255, 0.6);
-    }
+  .contact__form-select {
+    color-scheme: dark;
+  }
+
+  .contact__form-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
   }
 }
 

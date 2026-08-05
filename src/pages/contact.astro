@@ -16,7 +16,7 @@ import '../styles/components/_pages.scss';
 
       <form class="contact__form">
         <div class="contact__form-group">
-          <label class="contact__form-label">Welke show kies je?</label>
+          <label class="contact__form-label">Ik wil deze act:</label>
           <select class="contact__form-select" required>
             <option value="">Selecteer een optie</option>
             <option value="Table Magic">Table Magic</option>
@@ -38,20 +38,21 @@ import '../styles/components/_pages.scss';
           <input type="email" placeholder="jij@voorbeeld.nl" required class="contact__form-input" />
         </div>
 
-        <div class="contact__form-group">
-          <label class="contact__form-label">Plaats</label>
-          <input type="text" placeholder="bijv. Alkmaar" class="contact__form-input" />
+          <div class="contact__form-group">
+          <label class="contact__form-label">Telefoonnummer</label>
+          <input type="tel" placeholder="06-12345678" required class="contact__form-input" />
         </div>
 
         <div class="contact__form-row">
+           <div class="contact__form-group">
+          <label class="contact__form-label">Plaats</label>
+          <input type="text" placeholder="bijv. Alkmaar" class="contact__form-input" />
+        </div>
           <div class="contact__form-group">
             <label class="contact__form-label">Datum</label>
             <input type="text" placeholder="bijv. 15 juni 2025" class="contact__form-input" />
           </div>
-          <div class="contact__form-group">
-            <label class="contact__form-label">Aantal gasten</label>
-            <input type="number" min="1" placeholder="bijv. 50" class="contact__form-input" />
-          </div>
+         
         </div>
 
         <div class="contact__form-group">
