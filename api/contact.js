@@ -8,8 +8,15 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { act, naam, email, telefoon, plaats, datum, bericht, return_to } = req.body || {};
+  const { act, naam, email, telefoon, plaats, datum, bericht, return_to, website } = req.body || {};
   const returnPath = typeof return_to === 'string' && return_to.startsWith('/') ? return_to : '/contact';
+
+  // ponytail: honeypot veld — bots vullen 'website' in, mensen zien het niet. Fake success zodat bots niet doorleren.
+  if (website) {
+    res.writeHead(302, { Location: `${returnPath}?verzonden=1` });
+    res.end();
+    return;
+  }
 
   if (!act || !naam || !email || !telefoon) {
     res.status(400).send('Verplichte velden ontbreken');

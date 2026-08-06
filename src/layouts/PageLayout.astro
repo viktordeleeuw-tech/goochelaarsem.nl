@@ -46,6 +46,7 @@ const { title, description } = Astro.props;
     </div>
     <form class="contact__form" action="/api/contact" method="POST">
       <input type="hidden" name="return_to" value={Astro.url.pathname} />
+      <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
       <select name="act" class="contact__form-select" required>
         <option value="">Ik wil deze act:</option>
         <option value="Table Magic">Table Magic</option>

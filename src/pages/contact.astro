@@ -16,6 +16,7 @@ import '../styles/components/_pages.scss';
 
       <form class="contact__form" action="/api/contact" method="POST">
         <input type="hidden" name="return_to" value={Astro.url.pathname} />
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
         <div class="contact__form-group">
           <label class="contact__form-label">Ik wil deze act:</label>
           <select name="act" class="contact__form-select" required>
