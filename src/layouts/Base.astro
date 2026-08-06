@@ -42,6 +42,12 @@ const schema = {
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="google-site-verification" content="UtWwXdIB4YkyZyYlYvcxYcVS2EIpz-B2i39VpbZFXcM" />
+
+<link rel="icon" href="/images/favicon/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+<link rel="manifest" href="/images/favicon/site.webmanifest" />
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalURL} />
@@ -77,8 +83,24 @@ const schema = {
   if (localStorage.getItem('cookie-consent') === 'accepted') loadGA();
   document.addEventListener('cookie-consent-accepted', loadGA);
 </script>
+<script define:vars={{ GTM_ID: 'GTM-TQV8X6KL' }}>
+  function loadGTM() {
+    if (window.gtmLoaded) return;
+    window.gtmLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    const f = document.getElementsByTagName('script')[0];
+    const j = document.createElement('script');
+    j.async = true;
+    j.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
+    f.parentNode.insertBefore(j, f);
+  }
+  if (localStorage.getItem('cookie-consent') === 'accepted') loadGTM();
+  document.addEventListener('cookie-consent-accepted', loadGTM);
+</script>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQV8X6KL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <noscript><style>[data-reveal],[data-reveal-onload]{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
 <slot />
 <CookieBanner />
