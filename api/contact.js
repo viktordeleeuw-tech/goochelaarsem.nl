@@ -8,7 +8,8 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { act, naam, email, telefoon, plaats, datum, bericht } = req.body || {};
+  const { act, naam, email, telefoon, plaats, datum, bericht, return_to } = req.body || {};
+  const returnPath = typeof return_to === 'string' && return_to.startsWith('/') ? return_to : '/contact';
 
   if (!act || !naam || !email || !telefoon) {
     res.status(400).send('Verplichte velden ontbreken');
@@ -46,7 +47,7 @@ export default async function handler(req, res) {
       ].join('\n'),
     });
 
-    res.writeHead(302, { Location: '/contact?verzonden=1' });
+    res.writeHead(302, { Location: `${returnPath}?verzonden=1` });
     res.end();
   } catch (err) {
     console.error('Contact form error:', err);

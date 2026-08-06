@@ -44,22 +44,23 @@ const { title, description } = Astro.props;
         </div>
       </div>
     </div>
-    <form class="contact__form">
-      <select class="contact__form-select" required>
+    <form class="contact__form" action="/api/contact" method="POST">
+      <input type="hidden" name="return_to" value={Astro.url.pathname} />
+      <select name="act" class="contact__form-select" required>
         <option value="">Ik wil deze act:</option>
         <option value="Table Magic">Table Magic</option>
         <option value="Kindershows">Kindershows</option>
         <option value="BalloonMagic">BalloonMagic</option>
         <option value="Centrale Act">Centrale Act</option>
       </select>
-      <input type="text" placeholder="Naam" required class="contact__form-input" />
-      <input type="email" placeholder="Je e-mailadres" required class="contact__form-input" />
-      <input type="tel" placeholder="Je telefoonnummer" required class="contact__form-input" />
+      <input type="text" name="naam" placeholder="Naam" required class="contact__form-input" />
+      <input type="email" name="email" placeholder="Je e-mailadres" required class="contact__form-input" />
+      <input type="tel" name="telefoon" placeholder="Je telefoonnummer" required class="contact__form-input" />
       <div class="contact__form-row">
-        <input type="text" placeholder="Plaats" class="contact__form-input" />
-        <input type="text" placeholder="Datum" class="contact__form-input" />
+        <input type="text" name="plaats" placeholder="Plaats" class="contact__form-input" />
+        <input type="text" name="datum" placeholder="Datum" class="contact__form-input" />
       </div>
-      <textarea placeholder="Bericht" class="contact__form-input contact__form-textarea"></textarea>
+      <textarea name="bericht" placeholder="Bericht" class="contact__form-input contact__form-textarea"></textarea>
       <button type="submit" class="cta-primary contact__form-submit">Check beschikbaarheid</button>
       <!-- <div class="contact__form-note contact__form-note--small">Gemiddeld 4.9 ★ uit 200+ shows</div> -->
     </form>
