@@ -46,7 +46,7 @@ export default async function handler(req, res) {
       ].join('\n'),
     });
 
-    res.writeHead(302, { Location: '/contact?verzonden=1' });
+    res.writeHead(302, { Location: '/?verzonden=1' });
     res.end();
   } catch (err) {
     console.error('Contact form error:', err);

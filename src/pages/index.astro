@@ -1,11 +1,24 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import '../styles/components/_pages.scss';
+
+const verzonden = Astro.url.searchParams.get('verzonden');
 ---
 <PageLayout
   title="Sem Houtenbos | Goochelaar & Entertainer voor Evenementen"
   description="Sem Houtenbos zorgt voor magie, humor en verwondering op elk evenement: Table Magic, BalloonMagic, Centrale Acts en Kindershows door heel Nederland."
 >
+
+{verzonden && (
+  <div class="form-toast" id="form-toast" role="status">
+    Bedankt! Je aanvraag is verzonden, we reageren binnen 1 werkdag.
+  </div>
+  <script>
+    setTimeout(() => {
+      window.location.href = '/';
+    }, 3500);
+  </script>
+)}
 
 <section class="container hero section">
   <div data-reveal-onload="left">

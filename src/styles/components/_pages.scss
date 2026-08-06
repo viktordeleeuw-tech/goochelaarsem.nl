@@ -93,6 +93,21 @@
   border: 1px solid rgba(60, 179, 113, 0.4);
 }
 
+.form-toast {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  max-width: 90vw;
+  padding: 16px 24px;
+  border-radius: 8px;
+  background: #2f8a5c;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
 // De hero-form op de contactpagina hergebruikt .contact__form (gedeeld met de
 // navy #boeken-sectie), maar staat hier op een lichte achtergrond. Zonder eigen
 // achtergrond zijn de doorzichtige witte velden onleesbaar — daarom hier
