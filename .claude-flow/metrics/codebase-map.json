@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-05T15:16:00.739Z",
+  "timestamp": "2026-08-06T07:54:12.516Z",
   "projectRoot": "/Users/viktor/LionCraft/Klanten/Sem Houtenbos/goochelaarsem.nl",
   "structure": {
     "hasPackageJson": true,
@@ -7,5 +7,5 @@
     "hasClaudeConfig": true,
     "hasClaudeFlow": true
   },
-  "scannedAt": 1785942960739
+  "scannedAt": 1786002852516
 }

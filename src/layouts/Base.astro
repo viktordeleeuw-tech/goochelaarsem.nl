@@ -59,6 +59,23 @@ const schema = {
 <meta name="twitter:image" content={ogImageURL} />
 
 <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<script define:vars={{ GA_ID: 'G-ZJDZWF5SWT' }}>
+  function loadGA() {
+    if (window.gaLoaded) return;
+    window.gaLoaded = true;
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+  if (localStorage.getItem('cookie-consent') === 'accepted') loadGA();
+  document.addEventListener('cookie-consent-accepted', loadGA);
+</script>
 </head>
 <body>
 <noscript><style>[data-reveal],[data-reveal-onload]{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
