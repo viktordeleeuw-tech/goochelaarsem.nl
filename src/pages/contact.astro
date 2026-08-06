@@ -77,6 +77,9 @@ import '../styles/components/_pages.scss';
           document.getElementById('form-modal-close')?.addEventListener('click', () => {
             if (overlay) overlay.style.display = 'none';
           });
+          setTimeout(() => {
+            window.location.href = '/';
+          }, 3500);
         }
       </script>
     </div>
