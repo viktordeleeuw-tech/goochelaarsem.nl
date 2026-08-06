@@ -7,18 +7,6 @@ import '../styles/components/_pages.scss';
   description="Sem Houtenbos zorgt voor magie, humor en verwondering op elk evenement: Table Magic, BalloonMagic, Centrale Acts en Kindershows door heel Nederland."
 >
 
-<div class="form-toast" id="form-toast" role="status" style="display: none;">
-  Bedankt! Je aanvraag is verzonden, we reageren binnen 1 werkdag.
-</div>
-<script>
-  if (new URLSearchParams(window.location.search).get('verzonden')) {
-    const toast = document.getElementById('form-toast');
-    if (toast) toast.style.display = 'block';
-    setTimeout(() => {
-      window.location.href = '/';
-    }, 3500);
-  }
-</script>
 
 <section class="container hero section">
   <div data-reveal-onload="left">

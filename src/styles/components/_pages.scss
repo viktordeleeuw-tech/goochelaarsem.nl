@@ -84,28 +84,44 @@
   opacity: 0.6;
 }
 
-.contact__form-success {
-  text-align: center;
-  margin-bottom: 24px;
-  padding: 14px;
-  border-radius: 8px;
-  background: rgba(60, 179, 113, 0.15);
-  border: 1px solid rgba(60, 179, 113, 0.4);
+.form-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.form-toast {
-  position: fixed;
-  top: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-  max-width: 90vw;
-  padding: 16px 24px;
-  border-radius: 8px;
-  background: #2f8a5c;
-  color: #fff;
+.form-modal {
+  position: relative;
+  max-width: 420px;
+  width: 100%;
+  padding: 32px 28px;
+  border-radius: 12px;
+  background: #fff;
+  color: #1a1a1a;
   text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+
+  p {
+    margin: 0;
+    font-size: 17px;
+  }
+}
+
+.form-modal__close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  color: #1a1a1a;
 }
 
 // De hero-form op de contactpagina hergebruikt .contact__form (gedeeld met de
