@@ -84,6 +84,15 @@
   opacity: 0.6;
 }
 
+.contact__form-success {
+  text-align: center;
+  margin-bottom: 24px;
+  padding: 14px;
+  border-radius: 8px;
+  background: rgba(60, 179, 113, 0.15);
+  border: 1px solid rgba(60, 179, 113, 0.4);
+}
+
 // De hero-form op de contactpagina hergebruikt .contact__form (gedeeld met de
 // navy #boeken-sectie), maar staat hier op een lichte achtergrond. Zonder eigen
 // achtergrond zijn de doorzichtige witte velden onleesbaar — daarom hier
