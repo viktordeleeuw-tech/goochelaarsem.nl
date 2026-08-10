@@ -1,0 +1,75 @@
+@import '../base/variables';
+
+.custom-select {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.custom-select__native {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.custom-select__button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid $gold;
+  border-radius: 8px;
+  background: $navy;
+  color: $white;
+  font-family: inherit;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.custom-select__chevron {
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.custom-select__button[aria-expanded="true"] .custom-select__chevron {
+  transform: rotate(180deg);
+}
+
+.custom-select__list {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 240px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  border: 1px solid $gold;
+  border-radius: 8px;
+  background: $navy;
+  color: $white;
+}
+
+.custom-select__option {
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background: rgba($gold, 0.15);
+  }
+
+  &[aria-selected="true"] {
+    color: $gold;
+    font-weight: 600;
+  }
+}

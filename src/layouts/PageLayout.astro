@@ -1,6 +1,7 @@
 ---
 import Base from './Base.astro';
 import Navigation from '../components/Navigation.astro';
+import CustomSelect from '../components/CustomSelect.astro';
 import '../styles/components/_page-layout.scss';
 
 interface Props {
@@ -9,6 +10,13 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+
+const actOptions = [
+  { value: 'Table Magic', label: 'Table Magic' },
+  { value: 'Kindershows', label: 'Kindershows' },
+  { value: 'BalloonMagic', label: 'BalloonMagic' },
+  { value: 'Centrale Act', label: 'Centrale Act' },
+];
 ---
 
 <Base title={title} description={description}>
@@ -47,13 +55,7 @@ const { title, description } = Astro.props;
     <form class="contact__form" action="/api/contact" method="POST">
       <input type="hidden" name="return_to" value={Astro.url.pathname} />
       <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
-      <select name="act" class="contact__form-select" required>
-        <option value="">Ik wil deze act:</option>
-        <option value="Table Magic">Table Magic</option>
-        <option value="Kindershows">Kindershows</option>
-        <option value="BalloonMagic">BalloonMagic</option>
-        <option value="Centrale Act">Centrale Act</option>
-      </select>
+      <CustomSelect name="act" placeholder="Ik wil deze act:" options={actOptions} required />
       <input type="text" name="naam" placeholder="Naam" required class="contact__form-input" />
       <input type="email" name="email" placeholder="Je e-mailadres" required class="contact__form-input" />
       <input type="tel" name="telefoon" placeholder="Je telefoonnummer" required class="contact__form-input" />

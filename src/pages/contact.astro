@@ -1,6 +1,14 @@
 ---
 import ContactLayout from '../layouts/ContactLayout.astro';
+import CustomSelect from '../components/CustomSelect.astro';
 import '../styles/components/_pages.scss';
+
+const actOptions = [
+  { value: 'Table Magic', label: 'Table Magic' },
+  { value: 'Kindershows', label: 'Kindershows' },
+  { value: 'BalloonMagic', label: 'BalloonMagic' },
+  { value: 'Centrale act', label: 'Centrale Act' },
+];
 ---
 
 <ContactLayout
@@ -19,13 +27,7 @@ import '../styles/components/_pages.scss';
         <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
         <div class="contact__form-group">
           <label class="contact__form-label">Ik wil deze act:</label>
-          <select name="act" class="contact__form-select" required>
-            <option value="">Selecteer een optie</option>
-            <option value="Table Magic">Table Magic</option>
-            <option value="Kindershows">Kindershows</option>
-            <option value="BalloonMagic">BalloonMagic</option>
-            <option value="Centrale act">Centrale Act</option>
-          </select>
+          <CustomSelect name="act" placeholder="Selecteer een optie" options={actOptions} required />
         </div>
 
 

@@ -1,0 +1,110 @@
+---
+import '../styles/components/_custom-select.scss';
+
+interface Option {
+  value: string;
+  label: string;
+}
+
+interface Props {
+  name: string;
+  placeholder: string;
+  options: Option[];
+  required?: boolean;
+}
+
+const { name, placeholder, options, required = false } = Astro.props;
+const listId = `${name}-listbox`;
+---
+
+<div class="custom-select" data-custom-select>
+  <select name={name} class="custom-select__native" required={required} tabindex={-1} aria-hidden="true">
+    <option value="">{placeholder}</option>
+    {options.map((option) => <option value={option.value}>{option.label}</option>)}
+  </select>
+
+  <button
+    type="button"
+    class="custom-select__button"
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    aria-controls={listId}
+  >
+    <span class="custom-select__value" data-placeholder={placeholder}>{placeholder}</span>
+    <svg class="custom-select__chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+      <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <ul class="custom-select__list" role="listbox" id={listId} tabindex="-1" hidden>
+    <li role="option" class="custom-select__option" data-value="" aria-selected="true">{placeholder}</li>
+    {options.map((option) => (
+      <li role="option" class="custom-select__option" data-value={option.value} aria-selected="false">
+        {option.label}
+      </li>
+    ))}
+  </ul>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-custom-select]').forEach((root) => {
+    const native = root.querySelector('select') as HTMLSelectElement;
+    const button = root.querySelector('.custom-select__button') as HTMLButtonElement;
+    const valueEl = root.querySelector('.custom-select__value') as HTMLElement;
+    const list = root.querySelector('.custom-select__list') as HTMLUListElement;
+    const options = Array.from(root.querySelectorAll<HTMLLIElement>('.custom-select__option'));
+
+    const close = () => {
+      list.hidden = true;
+      button.setAttribute('aria-expanded', 'false');
+    };
+
+    const open = () => {
+      list.hidden = false;
+      button.setAttribute('aria-expanded', 'true');
+      const active = options.find((o) => o.getAttribute('aria-selected') === 'true') ?? options[0];
+      active.focus();
+    };
+
+    const select = (option: HTMLLIElement) => {
+      options.forEach((o) => o.setAttribute('aria-selected', 'false'));
+      option.setAttribute('aria-selected', 'true');
+      native.value = option.dataset.value ?? '';
+      valueEl.textContent = option.textContent;
+      close();
+      button.focus();
+    };
+
+    button.addEventListener('click', () => {
+      list.hidden ? open() : close();
+    });
+
+    options.forEach((option) => {
+      option.tabIndex = -1;
+      option.addEventListener('click', () => select(option));
+      option.addEventListener('keydown', (e) => {
+        const i = options.indexOf(option);
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          options[Math.min(i + 1, options.length - 1)].focus();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          options[Math.max(i - 1, 0)].focus();
+        } else if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          select(option);
+        } else if (e.key === 'Escape') {
+          e.preventDefault();
+          close();
+          button.focus();
+        } else if (e.key === 'Tab') {
+          close();
+        }
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!root.contains(e.target as Node)) close();
+    });
+  });
+</script>

@@ -47,7 +47,6 @@
 }
 
 .contact__form-input,
-.contact__form-select,
 .contact__form-textarea {
   width: 100%;
   padding: 12px;
@@ -57,13 +56,6 @@
   color: inherit;
   font-family: inherit;
   font-size: 16px;
-}
-
-.contact__form-select {
-  // Zonder dit gebruikt de uitgeklapte optielijst in Edge/Chrome de
-  // systeem-achtergrond (wit) terwijl de tekstkleur wel wordt geërfd (wit) —
-  // dit dwingt de browser het donkere systeemthema voor formuliervelden te gebruiken.
-  color-scheme: dark;
 }
 
 .contact__form-textarea {
@@ -350,7 +342,6 @@
   border-radius: 24px;
   backdrop-filter: blur(8px);
 
-  .contact__form-select,
   .contact__form-input {
     width: 100%;
     padding: 14px 18px;
@@ -358,12 +349,7 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
-    margin-bottom: 12px;
     font-family: inherit;
-  }
-
-  .contact__form-select {
-    color-scheme: dark;
   }
 
   .contact__form-input::placeholder {
