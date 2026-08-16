@@ -327,12 +327,22 @@ h1, h2, h3 {
 }
 .editorial__photos img:nth-child(3) {
   transform: rotate(-3deg) translateY(-60px);
-  margin-top: -70px;
-  margin-left: 10%;
+  margin-top: -50px;
+  margin-left: 20%;
   z-index: 3;
 }
 .editorial__photos img:nth-child(3):hover {
   transform: rotate(-3deg) translateY(-60px) scale(1.04);
+  z-index: 4;
+}
+.editorial__photos img:nth-child(4) {
+  transform: rotate(3deg) translateY(-60px);
+  margin-top: -30px;
+  margin-left: 10%;
+  z-index: 3;
+}
+.editorial__photos img:nth-child(4):hover {
+  transform: rotate(3deg) translateY(-60px) scale(1.04);
   z-index: 4;
 }
 .editorial__stats {
