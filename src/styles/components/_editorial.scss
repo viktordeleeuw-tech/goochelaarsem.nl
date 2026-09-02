@@ -32,6 +32,75 @@
     }
   }
 }
+// Prijzen/erkenning-lijst binnen "Over Sem" — award-rijen met gouden accent
+.about__prizes-intro{margin-top:24px;font-weight:600}
+.awards{margin-top:16px;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;
+  &__item{display:flex;align-items:center;gap:16px;padding:12px 16px;
+    background:$white;border-radius:14px;box-shadow:$shadow-soft;
+    border-left:3px solid $gold;
+    transition:transform .25s cubic-bezier(0.16,1,0.3,1),box-shadow .25s ease;
+    &:hover{transform:translateX(4px);box-shadow:0 12px 32px rgba(11,18,37,.12)}
+  }
+  &__year{flex:0 0 46px;text-align:center;font-family:$font-serif;font-weight:700;
+    font-size:20px;color:$navy;font-variant-numeric:tabular-nums;line-height:1;
+    &--mark{font-size:22px;color:$gold}
+  }
+  &__body{display:flex;flex-direction:column;gap:2px;font-size:16px;
+    strong{font-weight:600;color:$navy}
+  }
+  &__note{font-size:13px;opacity:.65}
+}
+@media (prefers-reduced-motion:reduce){
+  .awards__item:hover{transform:none}
+}
+
+// NK-kampioen sectie — zelfde look als "Over Sem" (.about), met polaroid-foto's
+.nk-champ{position:relative;overflow:hidden;
+  &__grid{display:grid;gap:56px;align-items:center;
+    @include respond($bp-lg){grid-template-columns:1fr 1.05fr}
+  }
+  &__eyebrow{display:inline-block;font-family:$font-sans;font-size:13px;font-weight:600;
+    letter-spacing:.12em;text-transform:uppercase;color:$navy;
+    background:$gold;padding:7px 14px;border-radius:$radius-full;margin-bottom:20px}
+  .about__text{margin-top:20px}
+  &__stats{display:flex;gap:32px;margin-top:28px;border-top:1px solid rgba(11,18,37,.12);padding-top:20px;
+    strong{font-family:$font-serif;font-size:30px;color:$navy;display:block;line-height:1.1}
+    span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.6}
+  }
+  &__photos{display:grid;grid-template-columns:1fr;gap:16px;
+    @include respond($bp-md){grid-template-columns:1fr 1fr;gap:20px 18px}
+    figure{margin:0;position:relative;border-radius:$radius-xl;overflow:hidden;
+      box-shadow:$shadow-soft;transition:transform .3s ease,box-shadow .3s ease;aspect-ratio:4/3;
+      img{width:100%;height:100%;object-fit:cover;display:block}
+      &:nth-child(1) img{object-position:center 22%}
+      @include respond($bp-md){
+        &:nth-child(1){grid-row:span 2;aspect-ratio:4/5}
+        &:nth-child(1) img{object-position:center}
+      }
+      &:hover{box-shadow:0 20px 44px rgba(11,18,37,.18);z-index:2}
+    }
+  }
+  .sparkle{font-size:22px;color:$gold;opacity:.5;
+    &:first-of-type{top:8%;left:auto;right:6%}
+    &:last-of-type{bottom:10%;left:4%}
+  }
+}
+// Op tablet+ krijgen de foto's de speelse polaroid-tilt uit .editorial
+@include respond($bp-md){
+  .nk-champ__photos figure{transform:rotate(var(--rotate,0deg));
+    &:hover{transform:rotate(var(--rotate,0deg)) scale(1.03)}
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .nk-champ__photos figure,
+  .nk-champ__photos figure:hover{transform:none}
+}
+// "Hoogste aantal punten"-badge op de trofeefoto
+.nk-champ__badge{position:absolute;left:14px;bottom:14px;
+  background:rgba(11,18,37,.82);color:$white;font-size:12px;font-weight:600;
+  letter-spacing:.04em;padding:7px 12px;border-radius:$radius-full;
+  backdrop-filter:blur(4px)}
+
 // ponytail: Safari clipped/dropped frames mid-animation because the track width
 // was computed before the images loaded and the layer wasn't GPU-promoted.
 // Fixed img width + object-fit keeps the track width stable; translate3d/will-change
