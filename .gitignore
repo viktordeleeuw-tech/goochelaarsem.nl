@@ -24,3 +24,10 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 .vercel
+
+# Tooling
+.claude-flow/
+.swarm/
+.claude/settings.local.json
+.claude/.proven-config-version
+.claude/proven-config.json
