@@ -9,33 +9,31 @@ const COOKIE_CONSENT_ENABLED = true;
       Lees meer in onze <a href="/privacy">privacyverklaring</a>.
     </p>
     <div class="cookie-banner__actions">
-      <button type="button" class="cookie-banner__btn cookie-banner__btn--decline" id="cookie-decline">Weigeren</button>
       <button type="button" class="cookie-banner__btn cookie-banner__btn--accept" id="cookie-accept">Accepteren</button>
+      <button type="button" class="cookie-banner__btn cookie-banner__btn--decline" id="cookie-decline">Weigeren</button>
     </div>
   </div>
 )}
 
 {COOKIE_CONSENT_ENABLED && (
-  <script>
-    const KEY = 'cookie-consent';
-    const banner = document.getElementById('cookie-banner');
-    const stored = localStorage.getItem(KEY);
-
-    if (stored === 'accepted') {
-      document.dispatchEvent(new CustomEvent('cookie-consent-accepted'));
-    } else if (!stored && banner) {
-      banner.hidden = false;
-    }
-
-    document.getElementById('cookie-accept')?.addEventListener('click', () => {
-      localStorage.setItem(KEY, 'accepted');
-      if (banner) banner.hidden = true;
-      document.dispatchEvent(new CustomEvent('cookie-consent-accepted'));
-    });
-
-    document.getElementById('cookie-decline')?.addEventListener('click', () => {
-      localStorage.setItem(KEY, 'declined');
-      if (banner) banner.hidden = true;
-    });
+  <script is:inline>
+    (() => {
+      const KEY = 'sh_cookie_consent', DAYS = 180; // 6 maanden, daarna opnieuw vragen
+      const banner = document.getElementById('cookie-banner');
+      if (!banner) return;
+      const load = () => {
+        try { const d = JSON.parse(localStorage.getItem(KEY) || 'null'); if (!d || Date.now() > d.expires) { localStorage.removeItem(KEY); return null; } return d; } catch { return null; }
+      };
+      const save = (analytics) => {
+        try { localStorage.setItem(KEY, JSON.stringify({ necessary: true, analytics, expires: Date.now() + DAYS * 864e5 })); } catch (e) {}
+        gtag('consent', 'update', { analytics_storage: analytics ? 'granted' : 'denied' });
+        dataLayer.push({ event: 'consent_update', analytics: analytics ? 'granted' : 'denied' });
+        banner.hidden = true;
+      };
+      document.getElementById('cookie-accept')?.addEventListener('click', () => save(true));
+      document.getElementById('cookie-decline')?.addEventListener('click', () => save(false));
+      document.addEventListener('click', (e) => { if (e.target.closest('[data-cookie-open]')) banner.hidden = false; });
+      if (!load()) banner.hidden = false;
+    })();
   </script>
 )}

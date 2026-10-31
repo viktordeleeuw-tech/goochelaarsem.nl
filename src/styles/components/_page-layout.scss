@@ -24,13 +24,23 @@ main {
   font-size: 12px;
   margin-top: 8px;
 
-  a {
+  a,
+  .footer__cookie-btn {
     text-decoration: underline;
 
     &:hover {
       opacity: 0.8;
     }
   }
+}
+
+.footer__cookie-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 
 .footer__right {
