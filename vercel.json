@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:path(table-magic|balloonmagic|centrale-act|kindershows|reviews|contact|privacy)",
+      "destination": "/:path/",
+      "permanent": true
+    }
+  ]
+}
