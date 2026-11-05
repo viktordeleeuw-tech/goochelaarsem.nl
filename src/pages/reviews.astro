@@ -25,17 +25,6 @@ const reviews = [
   { text: "We hadden op 18 juni een geweldige avond! Zijn truc met het kaartspel dat omhoog kwam was bizar! Sem zijn tafelgoochelshow is geweldig!", author: "Jan" },
   { text: "Sem is een erg fijne man die sterk is in wat hij doet. Hij heeft de hele familie vermaakt met zijn leuke trucjes.", author: "Jari" },
 ];
-
-const reviewSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'EntertainmentBusiness',
-  name: 'Sem Houtenbos',
-  review: reviews.map((r) => ({
-    '@type': 'Review',
-    reviewBody: r.text,
-    author: { '@type': 'Person', name: r.author },
-  })),
-};
 ---
 
 <PageLayout
@@ -57,5 +46,4 @@ const reviewSchema = {
     </div>
   </section>
 
-  <script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
 </PageLayout>
